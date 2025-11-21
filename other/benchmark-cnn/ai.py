@@ -1,7 +1,7 @@
 import os
 import re
 import tempfile
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 
 import pandas as pd
 from github import Github
@@ -21,6 +21,7 @@ SUPPORTED_EXTS = {
     ".js",
     ".ts",
     ".tsx",
+    ".jsx",
     ".fs",
     ".fsi",
     ".java",
@@ -28,6 +29,8 @@ SUPPORTED_EXTS = {
     ".cs",
     ".cpp",
     ".c",
+    ".cc",
+    ".h",
     ".rs",
     ".kt",
     ".rb",
@@ -35,6 +38,15 @@ SUPPORTED_EXTS = {
     ".zig",
     ".lua",
     ".rkt",
+    ".jl",
+    ".dart",
+    ".ch",
+    ".as",
+    ".qml",
+    ".mbt",
+    ".lisp",
+    ".sh",
+    ".xm",
 }
 
 load_dotenv()
@@ -46,27 +58,23 @@ GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
 # ============================================================
 
 
-def load_human_perf_prs() -> pd.DataFrame:
+def load_ai_perf_prs() -> pd.DataFrame:
     """
-    Load Human-PRs and filter to performance PRs using the human_pr_task_type table.
+    Load AI-agent PRs and filter to performance PRs using the pr_task_type table.
     This uses the AIDev parquet files via the HuggingFace 'hf://' URI scheme.
     """
-    human_pr = pd.read_parquet("hf://datasets/hao-li/AIDev/human_pull_request.parquet")
-    human_task = pd.read_parquet(
-        "hf://datasets/hao-li/AIDev/human_pr_task_type.parquet"
-    )
+    ai_pr = pd.read_parquet("hf://datasets/hao-li/AIDev/pull_request.parquet")
+    ai_task = pd.read_parquet("hf://datasets/hao-li/AIDev/pr_task_type.parquet")
 
     perf = (
-        human_pr.merge(human_task[["id", "type"]], on="id", how="inner")
+        ai_pr.merge(ai_task[["id", "type"]], on="id", how="inner")
         .query("type == 'perf'")
         .copy()
     )
 
     missing_cols = [c for c in ["id", "html_url"] if c not in perf.columns]
     if missing_cols:
-        raise ValueError(
-            f"Missing expected columns in human_pull_request: {missing_cols}"
-        )
+        raise ValueError(f"Missing expected columns in pull_request: {missing_cols}")
 
     return perf[["id", "html_url"]]
 
@@ -212,12 +220,12 @@ def aggregate_metrics(file_metrics: List[Dict[str, float]]) -> Dict[str, float]:
 def compute_ccn_deltas_for_prs(
     gh: Github,
     max_prs: Optional[int] = None,
-) -> pd.DataFrame:
+) -> Tuple[pd.DataFrame, pd.DataFrame]:
     """
-    Iterate over human perf PRs, compute CCN metrics before/after,
+    Iterate over AI perf PRs, compute CCN metrics before/after,
     and return a DataFrame with deltas per PR.
     """
-    perf_prs = load_human_perf_prs()
+    perf_prs = load_ai_perf_prs()
 
     if max_prs is not None:
         perf_prs = perf_prs.head(max_prs)
@@ -226,6 +234,17 @@ def compute_ccn_deltas_for_prs(
     total_prs = len(perf_prs)
     processed_prs = 0
     skipped_prs = 0
+    skip_records: List[Dict[str, str]] = []
+
+    def record_skip(pr_id: int, html_url: str, stage: str, reason: str) -> None:
+        skip_records.append(
+            {
+                "pr_id": pr_id,
+                "html_url": html_url,
+                "stage": stage,
+                "reason": reason,
+            }
+        )
 
     for _, row in perf_prs.iterrows():
         pr_id = row["id"]
@@ -237,6 +256,8 @@ def compute_ccn_deltas_for_prs(
             pr = repo.get_pull(number)
         except Exception as e:
             print(f"[WARN] Skipping PR {pr_id} ({html_url}): {e}")
+            skipped_prs += 1
+            record_skip(pr_id, html_url, "fetch_pr", str(e))
             continue
 
         base_sha = pr.base.sha
@@ -254,10 +275,14 @@ def compute_ccn_deltas_for_prs(
             files = list(pr.get_files())
         except Exception as e:
             print(f"[WARN] Error fetching files for PR {pr_id}: {e}")
+            skipped_prs += 1
+            record_skip(pr_id, html_url, "list_files", str(e))
             continue
 
         if not files:
             print(f"[WARN] No files list returned for PR {pr_id}, skipping.")
+            skipped_prs += 1
+            record_skip(pr_id, html_url, "no_files", "No files returned by API")
             continue
 
         for f in files:
@@ -306,6 +331,12 @@ def compute_ccn_deltas_for_prs(
         if not base_metrics_list or not head_metrics_list:
             print(f"[WARN] No metrics for PR {pr_id}, skipping this PR.")
             skipped_prs += 1
+            record_skip(
+                pr_id,
+                html_url,
+                "no_metrics",
+                "No valid lizard metrics for base or head",
+            )
             continue
 
         agg_base = aggregate_metrics(base_metrics_list)
@@ -336,12 +367,15 @@ def compute_ccn_deltas_for_prs(
         processed_prs += 1
 
     df = pd.DataFrame(rows)
+    skip_df = pd.DataFrame(
+        skip_records, columns=["pr_id", "html_url", "stage", "reason"]
+    )
     if df.empty:
         print("[WARN] Result DataFrame is empty (no PRs produced metrics).")
     print(
         f"[INFO] PR summary: total={total_prs}, processed={processed_prs}, skipped={skipped_prs}"
     )
-    return df
+    return df, skip_df
 
 
 def main():
@@ -351,10 +385,12 @@ def main():
         )
     gh = Github(GITHUB_TOKEN)
 
-    result = compute_ccn_deltas_for_prs(gh=gh)
+    result, skipped = compute_ccn_deltas_for_prs(gh=gh)
 
-    out_path = "human_perf_pr_ccn_deltas.csv"
+    out_path = "ai_perf_pr_ccn_deltas.csv"
     result.to_csv(out_path, index=False)
+    skipped_out = "ai_perf_pr_skipped.csv"
+    skipped.to_csv(skipped_out, index=False)
 
 
 if __name__ == "__main__":
