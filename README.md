@@ -77,4 +77,14 @@ The second notebook answers the research questions with descriptive stats and vi
 - **Long patches:** The helper automatically trims patch payloads, but you can tighten the `patch_str` cap if you see token limit errors.
 - **Version control:** Because notebooks produce large intermediate artifacts, add the CSV/plots you care about and ignore checkpoints in Git as needed.
 
+## Environment variables
+
+The project uses a `.env` file to securely manage sensitive information such as the GitHub API token. Ensure you have a `.env` file in the root directory with the following content:
+
+```
+GITHUB_TOKEN=your_github_personal_access_token
+```
+
+Replace `your_github_personal_access_token` with your actual token. This token is loaded in the notebooks using the `python-dotenv` package to authenticate GitHub API requests.
+
 Feel free to adapt the notebooks into Python scripts if you plan to schedule recurring refreshes or integrate with other analytics tooling.
