@@ -1,0 +1,391 @@
+pr_id,html_url,metric,original,optimized,delta,delta_pct
+2486573779,https://github.com/getsentry/sentry/pull/90516,Total nloc,277.0,275.5,-1.5,-0.5415162454873645
+2486573779,https://github.com/getsentry/sentry/pull/90516,Avg.NLOC,13.05421568627451,13.207291666666666,0.1530759803921562,1.172617214782989
+2486573779,https://github.com/getsentry/sentry/pull/90516,AvgCCN,3.65625,3.7104166666666667,0.054166666666666696,1.4814814814814823
+2486573779,https://github.com/getsentry/sentry/pull/90516,Fun Cnt,18.25,17.75,-0.5,-2.73972602739726
+2486573779,https://github.com/getsentry/sentry/pull/90516,Avg.token,90.48654411764706,91.796875,1.3103308823529431,1.4480947362176881
+2419106029,https://github.com/getsentry/sentry/pull/87963,Total nloc,116.0,121.5,5.5,4.741379310344827
+2419106029,https://github.com/getsentry/sentry/pull/87963,Avg.NLOC,,,,
+2419106029,https://github.com/getsentry/sentry/pull/87963,AvgCCN,,,,
+2419106029,https://github.com/getsentry/sentry/pull/87963,Fun Cnt,4.0,4.0,0.0,0.0
+2419106029,https://github.com/getsentry/sentry/pull/87963,Avg.token,,,,
+2425248848,https://github.com/oven-sh/bun/pull/18585,Total nloc,2377.0,2377.0,0.0,0.0
+2425248848,https://github.com/oven-sh/bun/pull/18585,Avg.NLOC,16.192857142857143,16.192857142857143,0.0,0.0
+2425248848,https://github.com/oven-sh/bun/pull/18585,AvgCCN,2.692857142857143,2.692857142857143,0.0,0.0
+2425248848,https://github.com/oven-sh/bun/pull/18585,Fun Cnt,140.0,140.0,0.0,0.0
+2425248848,https://github.com/oven-sh/bun/pull/18585,Avg.token,118.26428571428572,118.26428571428572,0.0,0.0
+2613893429,https://github.com/oven-sh/bun/pull/20612,Total nloc,2123.0,2128.0,5.0,0.23551577955723035
+2613893429,https://github.com/oven-sh/bun/pull/20612,Avg.NLOC,16.60655737704918,16.647540983606557,0.04098360655737565,0.24679170779860954
+2613893429,https://github.com/oven-sh/bun/pull/20612,AvgCCN,2.6639344262295084,2.6639344262295084,0.0,0.0
+2613893429,https://github.com/oven-sh/bun/pull/20612,Fun Cnt,122.0,122.0,0.0,0.0
+2613893429,https://github.com/oven-sh/bun/pull/20612,Avg.token,123.27049180327869,123.51639344262296,0.24590163934426812,0.19948134849392055
+2303501996,https://github.com/oven-sh/bun/pull/16857,Total nloc,2029.0,2034.0,5.0,0.2464268112370626
+2303501996,https://github.com/oven-sh/bun/pull/16857,Avg.NLOC,10.424242424242424,10.454545454545455,0.030303030303031164,0.29069767441861294
+2303501996,https://github.com/oven-sh/bun/pull/16857,AvgCCN,2.860606060606061,2.8666666666666667,0.006060606060605878,0.2118644067796546
+2303501996,https://github.com/oven-sh/bun/pull/16857,Fun Cnt,165.0,165.0,0.0,0.0
+2303501996,https://github.com/oven-sh/bun/pull/16857,Avg.token,85.84242424242424,86.10909090909091,0.2666666666666657,0.31064670996893423
+2427616889,https://github.com/RockChinQ/LangBot/pull/1256,Total nloc,120.5,120.5,0.0,0.0
+2427616889,https://github.com/RockChinQ/LangBot/pull/1256,Avg.NLOC,36.833333333333336,36.833333333333336,0.0,0.0
+2427616889,https://github.com/RockChinQ/LangBot/pull/1256,AvgCCN,9.416666666666666,9.416666666666666,0.0,0.0
+2427616889,https://github.com/RockChinQ/LangBot/pull/1256,Fun Cnt,4.0,4.0,0.0,0.0
+2427616889,https://github.com/RockChinQ/LangBot/pull/1256,Avg.token,246.16666666666666,248.5,2.333333333333343,0.947867298578203
+2609611207,https://github.com/TracecatHQ/tracecat/pull/1213,Total nloc,124.5,128.5,4.0,3.2128514056224895
+2609611207,https://github.com/TracecatHQ/tracecat/pull/1213,Avg.NLOC,,,,
+2609611207,https://github.com/TracecatHQ/tracecat/pull/1213,AvgCCN,,,,
+2609611207,https://github.com/TracecatHQ/tracecat/pull/1213,Fun Cnt,1.5,1.5,0.0,0.0
+2609611207,https://github.com/TracecatHQ/tracecat/pull/1213,Avg.token,,,,
+2356985296,https://github.com/bruin-data/bruin/pull/470,Total nloc,414.6,423.8,9.199999999999989,2.2190062711046763
+2356985296,https://github.com/bruin-data/bruin/pull/470,Avg.NLOC,24.89230769230769,25.630769230769232,0.7384615384615429,2.966625463535247
+2356985296,https://github.com/bruin-data/bruin/pull/470,AvgCCN,3.153846153846154,3.2,0.04615384615384599,1.463414634146336
+2356985296,https://github.com/bruin-data/bruin/pull/470,Fun Cnt,9.6,9.6,0.0,0.0
+2356985296,https://github.com/bruin-data/bruin/pull/470,Avg.token,138.85384615384615,142.4653846153846,3.6115384615384585,2.600963935516036
+2564432253,https://github.com/tokens-studio/figma-plugin/pull/3402,Total nloc,529.25,635.75,106.5,20.12281530467643
+2564432253,https://github.com/tokens-studio/figma-plugin/pull/3402,Avg.NLOC,12.473214285714285,13.027615613553113,0.5544013278388285,4.4447350549712805
+2564432253,https://github.com/tokens-studio/figma-plugin/pull/3402,AvgCCN,3.876623376623377,4.191792582417582,0.31516920579420526,8.129992913284356
+2564432253,https://github.com/tokens-studio/figma-plugin/pull/3402,Fun Cnt,30.5,37.75,7.25,23.770491803278688
+2564432253,https://github.com/tokens-studio/figma-plugin/pull/3402,Avg.token,70.85362554112554,75.78751717032966,4.933891629204126,6.963499173857166
+2452623588,https://github.com/vllm-project/vllm/pull/16440,Total nloc,343.0,354.0,11.0,3.206997084548105
+2452623588,https://github.com/vllm-project/vllm/pull/16440,Avg.NLOC,7.111111111111111,7.416666666666667,0.30555555555555625,4.29687500000001
+2452623588,https://github.com/vllm-project/vllm/pull/16440,AvgCCN,3.0277777777777777,3.0833333333333335,0.0555555555555558,1.834862385321109
+2452623588,https://github.com/vllm-project/vllm/pull/16440,Fun Cnt,36.0,36.0,0.0,0.0
+2452623588,https://github.com/vllm-project/vllm/pull/16440,Avg.token,58.638888888888886,61.0,2.3611111111111143,4.026527711984847
+2260441374,https://github.com/OpenHFT/Chronicle-Core/pull/684,Total nloc,480.0,142.5,-337.5,-70.3125
+2260441374,https://github.com/OpenHFT/Chronicle-Core/pull/684,Avg.NLOC,11.277777777777779,8.26388888888889,-3.0138888888888893,-26.724137931034488
+2260441374,https://github.com/OpenHFT/Chronicle-Core/pull/684,AvgCCN,3.6944444444444446,1.7222222222222223,-1.9722222222222223,-53.383458646616546
+2260441374,https://github.com/OpenHFT/Chronicle-Core/pull/684,Fun Cnt,36.0,11.0,-25.0,-69.44444444444444
+2260441374,https://github.com/OpenHFT/Chronicle-Core/pull/684,Avg.token,74.97222222222223,54.42361111111111,-20.54861111111112,-27.4082993701371
+2269202548,https://github.com/seasonedcc/remix-forms/pull/272,Total nloc,86.5,82.0,-4.5,-5.202312138728324
+2269202548,https://github.com/seasonedcc/remix-forms/pull/272,Avg.NLOC,,,,
+2269202548,https://github.com/seasonedcc/remix-forms/pull/272,AvgCCN,,,,
+2269202548,https://github.com/seasonedcc/remix-forms/pull/272,Fun Cnt,9.0,9.0,0.0,0.0
+2269202548,https://github.com/seasonedcc/remix-forms/pull/272,Avg.token,,,,
+2537690761,https://github.com/herbie-fp/herbie/pull/1231,Total nloc,118.0,121.0,3.0,2.5423728813559325
+2537690761,https://github.com/herbie-fp/herbie/pull/1231,Avg.NLOC,,,,
+2537690761,https://github.com/herbie-fp/herbie/pull/1231,AvgCCN,,,,
+2537690761,https://github.com/herbie-fp/herbie/pull/1231,Fun Cnt,0.0,0.0,,
+2537690761,https://github.com/herbie-fp/herbie/pull/1231,Avg.token,,,,
+2443864788,https://github.com/herbie-fp/herbie/pull/1182,Total nloc,603.0,595.25,-7.75,-1.285240464344942
+2443864788,https://github.com/herbie-fp/herbie/pull/1182,Avg.NLOC,,,,
+2443864788,https://github.com/herbie-fp/herbie/pull/1182,AvgCCN,,,,
+2443864788,https://github.com/herbie-fp/herbie/pull/1182,Fun Cnt,0.0,0.0,,
+2443864788,https://github.com/herbie-fp/herbie/pull/1182,Avg.token,,,,
+2408616836,https://github.com/roboflow/inference/pull/1092,Total nloc,363.0,361.0,-2.0,-0.5509641873278237
+2408616836,https://github.com/roboflow/inference/pull/1092,Avg.NLOC,15.5,15.4,-0.09999999999999964,-0.6451612903225784
+2408616836,https://github.com/roboflow/inference/pull/1092,AvgCCN,3.25,3.25,0.0,0.0
+2408616836,https://github.com/roboflow/inference/pull/1092,Fun Cnt,20.0,20.0,0.0,0.0
+2408616836,https://github.com/roboflow/inference/pull/1092,Avg.token,90.15,89.05,-1.1000000000000085,-1.2201885745979018
+2616290996,https://github.com/roboflow/inference/pull/1385,Total nloc,146.0,146.0,0.0,0.0
+2616290996,https://github.com/roboflow/inference/pull/1385,Avg.NLOC,11.454545454545455,11.454545454545455,0.0,0.0
+2616290996,https://github.com/roboflow/inference/pull/1385,AvgCCN,2.3636363636363638,3.1818181818181817,0.8181818181818179,34.615384615384606
+2616290996,https://github.com/roboflow/inference/pull/1385,Fun Cnt,11.0,11.0,0.0,0.0
+2616290996,https://github.com/roboflow/inference/pull/1385,Avg.token,65.54545454545455,69.54545454545455,4.0,6.102635228848821
+2519831355,https://github.com/roboflow/inference/pull/1280,Total nloc,596.0,602.0,6.0,1.006711409395973
+2519831355,https://github.com/roboflow/inference/pull/1280,Avg.NLOC,19.047619047619047,18.40909090909091,-0.6385281385281374,-3.3522727272727213
+2519831355,https://github.com/roboflow/inference/pull/1280,AvgCCN,1.9523809523809523,1.9090909090909092,-0.043290043290043156,-2.217294900221723
+2519831355,https://github.com/roboflow/inference/pull/1280,Fun Cnt,21.0,22.0,1.0,4.761904761904762
+2519831355,https://github.com/roboflow/inference/pull/1280,Avg.token,78.42857142857143,76.36363636363636,-2.064935064935071,-2.6328862394436237
+2356811134,https://github.com/gofiber/fiber/pull/3329,Total nloc,395.5,394.5,-1.0,-0.2528445006321113
+2356811134,https://github.com/gofiber/fiber/pull/3329,Avg.NLOC,10.237089201877936,10.209311424100157,-0.027777777777778567,-0.2713444928533288
+2356811134,https://github.com/gofiber/fiber/pull/3329,AvgCCN,2.285211267605634,2.285211267605634,0.0,0.0
+2356811134,https://github.com/gofiber/fiber/pull/3329,Fun Cnt,44.5,44.5,0.0,0.0
+2356811134,https://github.com/gofiber/fiber/pull/3329,Avg.token,71.84311424100156,71.25978090766823,-0.5833333333333286,-0.8119544085693526
+2544691147,https://github.com/gofiber/fiber/pull/3479,Total nloc,203.5,212.0,8.5,4.176904176904177
+2544691147,https://github.com/gofiber/fiber/pull/3479,Avg.NLOC,8.983555651176133,8.76680304104117,-0.2167526101349626,-2.412770828737341
+2544691147,https://github.com/gofiber/fiber/pull/3479,AvgCCN,2.0447898737808377,1.9748493975903614,-0.06994047619047628,-3.420423638012037
+2544691147,https://github.com/gofiber/fiber/pull/3479,Fun Cnt,17.125,17.875,0.75,4.37956204379562
+2544691147,https://github.com/gofiber/fiber/pull/3479,Avg.token,60.72928499713138,60.80348318407319,0.07419818694180691,0.12217859463570459
+2607579182,https://github.com/gofiber/fiber/pull/3532,Total nloc,216.5,244.5,28.0,12.933025404157044
+2607579182,https://github.com/gofiber/fiber/pull/3532,Avg.NLOC,14.395833333333334,15.392156862745098,0.9963235294117645,6.920915978547712
+2607579182,https://github.com/gofiber/fiber/pull/3532,AvgCCN,4.104166666666667,4.313725490196078,0.20955882352941124,5.106001791579563
+2607579182,https://github.com/gofiber/fiber/pull/3532,Fun Cnt,9.5,10.0,0.5,5.263157894736842
+2607579182,https://github.com/gofiber/fiber/pull/3532,Avg.token,99.20833333333333,104.21568627450979,5.007352941176464,5.047310818489506
+2519312120,https://github.com/netket/netket/pull/2040,Total nloc,142.0,142.0,0.0,0.0
+2519312120,https://github.com/netket/netket/pull/2040,Avg.NLOC,16.875,16.875,0.0,0.0
+2519312120,https://github.com/netket/netket/pull/2040,AvgCCN,5.75,5.75,0.0,0.0
+2519312120,https://github.com/netket/netket/pull/2040,Fun Cnt,8.0,8.0,0.0,0.0
+2519312120,https://github.com/netket/netket/pull/2040,Avg.token,144.125,144.75,0.625,0.43365134431916735
+2324987642,https://github.com/tinygrad/tinygrad/pull/8994,Total nloc,621.0,621.6,0.6000000000000227,0.09661835748792637
+2324987642,https://github.com/tinygrad/tinygrad/pull/8994,Avg.NLOC,7.114366648609606,7.155392289635247,0.04102564102564088,0.5766590766538398
+2324987642,https://github.com/tinygrad/tinygrad/pull/8994,AvgCCN,2.806339156735284,2.814031464427591,0.007692307692307221,0.2741047059064651
+2324987642,https://github.com/tinygrad/tinygrad/pull/8994,Fun Cnt,79.6,79.6,0.0,0.0
+2324987642,https://github.com/tinygrad/tinygrad/pull/8994,Avg.token,108.60673528349585,108.28117438605996,-0.3255608974358921,-0.2997612409452152
+2545078467,https://github.com/EricLBuehler/mistral.rs/pull/1379,Total nloc,818.5,838.5,20.0,2.443494196701283
+2545078467,https://github.com/EricLBuehler/mistral.rs/pull/1379,Avg.NLOC,43.08571428571429,37.31785714285714,-5.767857142857146,-13.386936339522554
+2545078467,https://github.com/EricLBuehler/mistral.rs/pull/1379,AvgCCN,7.857142857142858,6.815476190476191,-1.041666666666667,-13.25757575757576
+2545078467,https://github.com/EricLBuehler/mistral.rs/pull/1379,Fun Cnt,18.0,20.5,2.5,13.88888888888889
+2545078467,https://github.com/EricLBuehler/mistral.rs/pull/1379,Avg.token,279.18095238095236,242.1511904761905,-37.02976190476187,-13.263713583953049
+2558083620,https://github.com/bionic-gpt/bionic-gpt/pull/776,Total nloc,166.0,183.0,17.0,10.240963855421686
+2558083620,https://github.com/bionic-gpt/bionic-gpt/pull/776,Avg.NLOC,75.5,84.0,8.5,11.258278145695364
+2558083620,https://github.com/bionic-gpt/bionic-gpt/pull/776,AvgCCN,2.0,2.0,0.0,0.0
+2558083620,https://github.com/bionic-gpt/bionic-gpt/pull/776,Fun Cnt,2.0,2.0,0.0,0.0
+2558083620,https://github.com/bionic-gpt/bionic-gpt/pull/776,Avg.token,339.5,365.0,25.5,7.511045655375552
+2615702170,https://github.com/bruin-data/ingestr/pull/264,Total nloc,794.25,782.0,-12.25,-1.5423355366698142
+2615702170,https://github.com/bruin-data/ingestr/pull/264,Avg.NLOC,26.552027027027027,26.41640049140049,-0.13562653562653537,-0.5107954111694846
+2615702170,https://github.com/bruin-data/ingestr/pull/264,AvgCCN,4.343130630630631,4.280630630630631,-0.0625,-1.4390541136204527
+2615702170,https://github.com/bruin-data/ingestr/pull/264,Fun Cnt,35.25,34.5,-0.75,-2.127659574468085
+2615702170,https://github.com/bruin-data/ingestr/pull/264,Avg.token,135.58085585585587,134.22457002457003,-1.3562858312858452,-1.000352020736463
+2542615571,https://github.com/joamag/boytacean/pull/10,Total nloc,1821.0,1843.0,22.0,1.2081274025260844
+2542615571,https://github.com/joamag/boytacean/pull/10,Avg.NLOC,14.971428571428572,15.18095238095238,0.20952380952380878,1.3994910941475778
+2542615571,https://github.com/joamag/boytacean/pull/10,AvgCCN,3.5142857142857142,3.5142857142857142,0.0,0.0
+2542615571,https://github.com/joamag/boytacean/pull/10,Fun Cnt,105.0,105.0,0.0,0.0
+2542615571,https://github.com/joamag/boytacean/pull/10,Avg.token,116.74285714285715,117.96190476190476,1.2190476190476147,1.0442160221895866
+2277950711,https://github.com/OpenHFT/Chronicle-Wire/pull/985,Total nloc,1223.0,1224.0,1.0,0.08176614881439084
+2277950711,https://github.com/OpenHFT/Chronicle-Wire/pull/985,Avg.NLOC,9.757009345794392,9.766355140186915,0.009345794392523032,0.09578544061302342
+2277950711,https://github.com/OpenHFT/Chronicle-Wire/pull/985,AvgCCN,2.8411214953271027,2.850467289719626,0.009345794392523477,0.3289473684210566
+2277950711,https://github.com/OpenHFT/Chronicle-Wire/pull/985,Fun Cnt,107.0,107.0,0.0,0.0
+2277950711,https://github.com/OpenHFT/Chronicle-Wire/pull/985,Avg.token,55.12149532710281,55.205607476635514,0.08411214953270729,0.15259409969480636
+2260678480,https://github.com/OpenHFT/Chronicle-Wire/pull/984,Total nloc,67.0,74.0,7.0,10.44776119402985
+2260678480,https://github.com/OpenHFT/Chronicle-Wire/pull/984,Avg.NLOC,9.8,10.6,0.7999999999999989,8.163265306122437
+2260678480,https://github.com/OpenHFT/Chronicle-Wire/pull/984,AvgCCN,1.6,1.4,-0.20000000000000018,-12.50000000000001
+2260678480,https://github.com/OpenHFT/Chronicle-Wire/pull/984,Fun Cnt,5.0,5.0,0.0,0.0
+2260678480,https://github.com/OpenHFT/Chronicle-Wire/pull/984,Avg.token,82.6,89.2,6.6000000000000085,7.990314769975798
+2527565003,https://github.com/Kanaries/graphic-walker/pull/443,Total nloc,230.33333333333334,258.3333333333333,27.99999999999997,12.156295224312577
+2527565003,https://github.com/Kanaries/graphic-walker/pull/443,Avg.NLOC,14.354166666666666,15.229166666666666,0.875,6.095791001451379
+2527565003,https://github.com/Kanaries/graphic-walker/pull/443,AvgCCN,2.8958333333333335,2.8958333333333335,0.0,0.0
+2527565003,https://github.com/Kanaries/graphic-walker/pull/443,Fun Cnt,13.333333333333334,13.333333333333334,0.0,0.0
+2527565003,https://github.com/Kanaries/graphic-walker/pull/443,Avg.token,71.97916666666667,75.73958333333333,3.760416666666657,5.224312590448612
+2524180167,https://github.com/mangiucugna/json_repair/pull/112,Total nloc,34.0,34.0,0.0,0.0
+2524180167,https://github.com/mangiucugna/json_repair/pull/112,Avg.NLOC,15.5,15.5,0.0,0.0
+2524180167,https://github.com/mangiucugna/json_repair/pull/112,AvgCCN,8.0,8.0,0.0,0.0
+2524180167,https://github.com/mangiucugna/json_repair/pull/112,Fun Cnt,2.0,2.0,0.0,0.0
+2524180167,https://github.com/mangiucugna/json_repair/pull/112,Avg.token,115.5,115.5,0.0,0.0
+2524300649,https://github.com/mangiucugna/json_repair/pull/114,Total nloc,632.0,628.0,-4.0,-0.6329113924050633
+2524300649,https://github.com/mangiucugna/json_repair/pull/114,Avg.NLOC,48.07692307692308,47.76923076923077,-0.3076923076923137,-0.6400000000000124
+2524300649,https://github.com/mangiucugna/json_repair/pull/114,AvgCCN,17.846153846153847,17.846153846153847,0.0,0.0
+2524300649,https://github.com/mangiucugna/json_repair/pull/114,Fun Cnt,13.0,13.0,0.0,0.0
+2524300649,https://github.com/mangiucugna/json_repair/pull/114,Avg.token,273.7692307692308,274.46153846153845,0.6923076923076792,0.2528800224782194
+2524313861,https://github.com/mangiucugna/json_repair/pull/115,Total nloc,632.0,647.0,15.0,2.3734177215189876
+2524313861,https://github.com/mangiucugna/json_repair/pull/115,Avg.NLOC,48.07692307692308,49.23076923076923,1.1538461538461533,2.3999999999999986
+2524313861,https://github.com/mangiucugna/json_repair/pull/115,AvgCCN,17.846153846153847,17.923076923076923,0.07692307692307665,0.4310344827586191
+2524313861,https://github.com/mangiucugna/json_repair/pull/115,Fun Cnt,13.0,13.0,0.0,0.0
+2524313861,https://github.com/mangiucugna/json_repair/pull/115,Avg.token,273.7692307692308,280.61538461538464,6.846153846153868,2.5007024445068917
+2469218203,https://github.com/wandb/weave/pull/4192,Total nloc,483.0,512.5,29.5,6.107660455486543
+2469218203,https://github.com/wandb/weave/pull/4192,Avg.NLOC,,,,
+2469218203,https://github.com/wandb/weave/pull/4192,AvgCCN,,,,
+2469218203,https://github.com/wandb/weave/pull/4192,Fun Cnt,42.75,44.25,1.5,3.508771929824561
+2469218203,https://github.com/wandb/weave/pull/4192,Avg.token,,,,
+2358030784,https://github.com/onyx-dot-app/onyx/pull/4127,Total nloc,566.6,471.8,-94.80000000000001,-16.731380162372044
+2358030784,https://github.com/onyx-dot-app/onyx/pull/4127,Avg.NLOC,26.343880678708263,24.875101010101012,-1.468779668607251,-5.575411180002622
+2358030784,https://github.com/onyx-dot-app/onyx/pull/4127,AvgCCN,4.909844006568145,4.485420875420876,-0.42442313114726904,-8.644330259362556
+2358030784,https://github.com/onyx-dot-app/onyx/pull/4127,Fun Cnt,19.8,18.4,-1.4000000000000021,-7.070707070707082
+2358030784,https://github.com/onyx-dot-app/onyx/pull/4127,Avg.token,135.00141671227877,128.52286195286194,-6.478554759416824,-4.798879091190737
+2369238232,https://github.com/joshyattridge/smart-money-concepts/pull/74,Total nloc,402.5,391.0,-11.5,-2.857142857142857
+2369238232,https://github.com/joshyattridge/smart-money-concepts/pull/74,Avg.NLOC,32.620879120879124,31.21153846153846,-1.409340659340664,-4.320363820111182
+2369238232,https://github.com/joshyattridge/smart-money-concepts/pull/74,AvgCCN,6.115384615384615,5.961538461538462,-0.1538461538461533,-2.5157232704402426
+2369238232,https://github.com/joshyattridge/smart-money-concepts/pull/74,Fun Cnt,10.0,10.5,0.5,5.0
+2369238232,https://github.com/joshyattridge/smart-money-concepts/pull/74,Avg.token,265.3241758241758,259.61538461538464,-5.708791208791183,-2.1516287353227344
+2369253951,https://github.com/joshyattridge/smart-money-concepts/pull/75,Total nloc,675.0,688.0,13.0,1.925925925925926
+2369253951,https://github.com/joshyattridge/smart-money-concepts/pull/75,Avg.NLOC,50.92307692307692,51.92307692307692,1.0,1.9637462235649545
+2369253951,https://github.com/joshyattridge/smart-money-concepts/pull/75,AvgCCN,10.923076923076923,11.538461538461538,0.615384615384615,5.6338028169014045
+2369253951,https://github.com/joshyattridge/smart-money-concepts/pull/75,Fun Cnt,13.0,13.0,0.0,0.0
+2369253951,https://github.com/joshyattridge/smart-money-concepts/pull/75,Avg.token,429.2307692307692,430.53846153846155,1.3076923076923208,0.30465949820788835
+2354104157,https://github.com/AFASSoftware/maquette/pull/193,Total nloc,416.0,399.0,-17.0,-4.086538461538462
+2354104157,https://github.com/AFASSoftware/maquette/pull/193,Avg.NLOC,11.971019809244314,12.296296296296296,0.32527648705198153,2.7171994720182076
+2354104157,https://github.com/AFASSoftware/maquette/pull/193,AvgCCN,3.4761555392516508,3.6224747474747474,0.14631920822309663,4.209225006502336
+2354104157,https://github.com/AFASSoftware/maquette/pull/193,Fun Cnt,38.0,35.5,-2.5,-6.578947368421052
+2354104157,https://github.com/AFASSoftware/maquette/pull/193,Avg.token,82.29897285399854,83.77314814814815,1.4741752941496173,1.7912438552117285
+2617294066,https://github.com/appsmithorg/appsmith/pull/41033,Total nloc,293.3125,277.94444444444446,-15.368055555555543,-5.239481970783905
+2617294066,https://github.com/appsmithorg/appsmith/pull/41033,Avg.NLOC,,,,
+2617294066,https://github.com/appsmithorg/appsmith/pull/41033,AvgCCN,,,,
+2617294066,https://github.com/appsmithorg/appsmith/pull/41033,Fun Cnt,11.90625,16.833333333333332,4.927083333333332,41.382327209098854
+2617294066,https://github.com/appsmithorg/appsmith/pull/41033,Avg.token,,,,
+2398828721,https://github.com/appsmithorg/appsmith/pull/39757,Total nloc,512.5,522.0,9.5,1.8536585365853657
+2398828721,https://github.com/appsmithorg/appsmith/pull/39757,Avg.NLOC,,,,
+2398828721,https://github.com/appsmithorg/appsmith/pull/39757,AvgCCN,,,,
+2398828721,https://github.com/appsmithorg/appsmith/pull/39757,Fun Cnt,17.0,17.0,0.0,0.0
+2398828721,https://github.com/appsmithorg/appsmith/pull/39757,Avg.token,,,,
+2336649960,https://github.com/bitcoin/bitcoin/pull/31868,Total nloc,376.0,381.85714285714283,5.857142857142833,1.5577507598784128
+2336649960,https://github.com/bitcoin/bitcoin/pull/31868,Avg.NLOC,25.511641658258203,24.868358625501482,-0.6432830327567203,-2.521527392763795
+2336649960,https://github.com/bitcoin/bitcoin/pull/31868,AvgCCN,2.9825472772841195,2.9316849816849815,-0.05086229559913802,-1.7053307414946584
+2336649960,https://github.com/bitcoin/bitcoin/pull/31868,Fun Cnt,13.142857142857142,13.857142857142858,0.7142857142857153,5.43478260869566
+2336649960,https://github.com/bitcoin/bitcoin/pull/31868,Avg.token,236.1947205676529,230.49971219256935,-5.695008375083546,-2.4111497333202814
+2336988355,https://github.com/beyond-all-reason/Beyond-All-Reason/pull/4336,Total nloc,125.0,117.5,-7.5,-6.0
+2336988355,https://github.com/beyond-all-reason/Beyond-All-Reason/pull/4336,Avg.NLOC,15.277777777777777,12.929824561403509,-2.3479532163742682,-15.368421052631575
+2336988355,https://github.com/beyond-all-reason/Beyond-All-Reason/pull/4336,AvgCCN,4.111111111111111,3.9210526315789473,-0.19005847953216337,-4.623044096728298
+2336988355,https://github.com/beyond-all-reason/Beyond-All-Reason/pull/4336,Fun Cnt,10.5,11.0,0.5,4.761904761904762
+2336988355,https://github.com/beyond-all-reason/Beyond-All-Reason/pull/4336,Avg.token,75.05555555555554,65.71929824561403,-9.336257309941516,-12.439128910358795
+2590261382,https://github.com/microsoft/vscode/pull/251382,Total nloc,137.0,140.0,3.0,2.18978102189781
+2590261382,https://github.com/microsoft/vscode/pull/251382,Avg.NLOC,6.1,6.25,0.15000000000000036,2.459016393442629
+2590261382,https://github.com/microsoft/vscode/pull/251382,AvgCCN,1.85,1.85,0.0,0.0
+2590261382,https://github.com/microsoft/vscode/pull/251382,Fun Cnt,20.0,20.0,0.0,0.0
+2590261382,https://github.com/microsoft/vscode/pull/251382,Avg.token,42.2,42.55,0.3499999999999943,0.8293838862559108
+2269709704,https://github.com/microsoft/typescript-go/pull/218,Total nloc,107.33333333333333,129.66666666666666,22.33333333333333,20.807453416149066
+2269709704,https://github.com/microsoft/typescript-go/pull/218,Avg.NLOC,10.077777777777778,10.472222222222221,0.39444444444444393,3.91400220507166
+2269709704,https://github.com/microsoft/typescript-go/pull/218,AvgCCN,2.1555555555555554,2.138888888888889,-0.016666666666666607,-0.773195876288657
+2269709704,https://github.com/microsoft/typescript-go/pull/218,Fun Cnt,8.333333333333334,9.333333333333334,1.0,12.0
+2269709704,https://github.com/microsoft/typescript-go/pull/218,Avg.token,66.96111111111111,67.44444444444444,0.4833333333333343,0.7218119970131932
+2369320781,https://github.com/microsoft/typescript-go/pull/405,Total nloc,302.0,307.0,5.0,1.6556291390728477
+2369320781,https://github.com/microsoft/typescript-go/pull/405,Avg.NLOC,12.836601307189541,12.801307189542483,-0.0352941176470587,-0.274949083503054
+2369320781,https://github.com/microsoft/typescript-go/pull/405,AvgCCN,3.8357843137254903,3.844281045751634,0.00849673202614376,0.22151224707135173
+2369320781,https://github.com/microsoft/typescript-go/pull/405,Fun Cnt,15.666666666666666,15.333333333333334,-0.33333333333333215,-2.127659574468078
+2369320781,https://github.com/microsoft/typescript-go/pull/405,Avg.token,88.45996732026144,88.96503267973856,0.5050653594771148,0.5709535903948174
+2555753483,https://github.com/dotnet/msbuild/pull/11934,Total nloc,154.0,160.0,6.0,3.896103896103896
+2555753483,https://github.com/dotnet/msbuild/pull/11934,Avg.NLOC,20.333333333333332,21.333333333333332,1.0,4.918032786885247
+2555753483,https://github.com/dotnet/msbuild/pull/11934,AvgCCN,5.833333333333333,6.0,0.16666666666666696,2.857142857142862
+2555753483,https://github.com/dotnet/msbuild/pull/11934,Fun Cnt,6.0,6.0,0.0,0.0
+2555753483,https://github.com/dotnet/msbuild/pull/11934,Avg.token,133.33333333333334,132.5,-0.8333333333333428,-0.6250000000000071
+2452691617,https://github.com/dotnet/runtime/pull/114517,Total nloc,1066.0,1062.0,-4.0,-0.37523452157598497
+2452691617,https://github.com/dotnet/runtime/pull/114517,Avg.NLOC,47.05263157894737,46.94736842105263,-0.10526315789473983,-0.22371364653244485
+2452691617,https://github.com/dotnet/runtime/pull/114517,AvgCCN,21.789473684210527,21.736842105263158,-0.05263157894736992,-0.2415458937198136
+2452691617,https://github.com/dotnet/runtime/pull/114517,Fun Cnt,19.0,19.0,0.0,0.0
+2452691617,https://github.com/dotnet/runtime/pull/114517,Avg.token,320.10526315789474,319.94736842105266,-0.15789473684208133,-0.049325879644846186
+2622581875,https://github.com/dotnet/runtime/pull/117071,Total nloc,1212.0,1251.0,39.0,3.217821782178218
+2622581875,https://github.com/dotnet/runtime/pull/117071,Avg.NLOC,17.90625,18.23076923076923,0.32451923076922995,1.8123238018525931
+2622581875,https://github.com/dotnet/runtime/pull/117071,AvgCCN,4.328125,4.3538461538461535,0.025721153846153477,0.5942793668425352
+2622581875,https://github.com/dotnet/runtime/pull/117071,Fun Cnt,64.0,65.0,1.0,1.5625
+2622581875,https://github.com/dotnet/runtime/pull/117071,Avg.token,92.90625,94.61538461538461,1.7091346153846132,1.8396336257082955
+2309904375,https://github.com/dotnet/runtime/pull/112047,Total nloc,219.0,218.0,-1.0,-0.45662100456621
+2309904375,https://github.com/dotnet/runtime/pull/112047,Avg.NLOC,20.625,20.5,-0.125,-0.6060606060606061
+2309904375,https://github.com/dotnet/runtime/pull/112047,AvgCCN,5.0,5.0,0.0,0.0
+2309904375,https://github.com/dotnet/runtime/pull/112047,Fun Cnt,8.0,8.0,0.0,0.0
+2309904375,https://github.com/dotnet/runtime/pull/112047,Avg.token,122.0,119.375,-2.625,-2.151639344262295
+2412640161,https://github.com/dotnet/efcore/pull/35835,Total nloc,2550.5,2575.5,25.0,0.9801999607920016
+2412640161,https://github.com/dotnet/efcore/pull/35835,Avg.NLOC,19.591946308724832,19.942953020134226,0.35100671140939355,1.7915867360920676
+2412640161,https://github.com/dotnet/efcore/pull/35835,AvgCCN,3.180201342281879,3.2406040268456375,0.06040268456375841,1.8993352326685669
+2412640161,https://github.com/dotnet/efcore/pull/35835,Fun Cnt,79.5,79.5,0.0,0.0
+2412640161,https://github.com/dotnet/efcore/pull/35835,Avg.token,121.44161073825504,122.21879194630873,0.7771812080536904,0.6399628622587697
+2386158448,https://github.com/dotnet/fsharp/pull/18377,Total nloc,13217.0,13219.0,2.0,0.015132026935007944
+2386158448,https://github.com/dotnet/fsharp/pull/18377,Avg.NLOC,,,,
+2386158448,https://github.com/dotnet/fsharp/pull/18377,AvgCCN,,,,
+2386158448,https://github.com/dotnet/fsharp/pull/18377,Fun Cnt,0.0,0.0,,
+2386158448,https://github.com/dotnet/fsharp/pull/18377,Avg.token,,,,
+2483117033,https://github.com/dotnet/fsharp/pull/18509,Total nloc,1723.4,1788.4,65.0,3.771614250899385
+2483117033,https://github.com/dotnet/fsharp/pull/18509,Avg.NLOC,,,,
+2483117033,https://github.com/dotnet/fsharp/pull/18509,AvgCCN,,,,
+2483117033,https://github.com/dotnet/fsharp/pull/18509,Fun Cnt,0.0,0.0,,
+2483117033,https://github.com/dotnet/fsharp/pull/18509,Avg.token,,,,
+2573225924,https://github.com/microsoft/TypeScript/pull/61822,Total nloc,4214.0,4214.0,0.0,0.0
+2573225924,https://github.com/microsoft/TypeScript/pull/61822,Avg.NLOC,9.040498442367602,9.11875,0.07825155763239877,0.8655668504479672
+2573225924,https://github.com/microsoft/TypeScript/pull/61822,AvgCCN,3.445482866043614,3.478125,0.032642133956386044,0.9473892405063219
+2573225924,https://github.com/microsoft/TypeScript/pull/61822,Fun Cnt,321.0,320.0,-1.0,-0.3115264797507788
+2573225924,https://github.com/microsoft/TypeScript/pull/61822,Avg.token,63.32710280373832,63.91875,0.5916471962616825,0.9342716942148764
+2394225726,https://github.com/stack-auth/stack-auth/pull/546,Total nloc,1016.0,1016.0,0.0,0.0
+2394225726,https://github.com/stack-auth/stack-auth/pull/546,Avg.NLOC,19.205882352941178,18.685714285714287,-0.5201680672268907,-2.7083789105228613
+2394225726,https://github.com/stack-auth/stack-auth/pull/546,AvgCCN,7.235294117647059,7.0,-0.23529411764705888,-3.252032520325204
+2394225726,https://github.com/stack-auth/stack-auth/pull/546,Fun Cnt,34.0,35.0,1.0,2.941176470588235
+2394225726,https://github.com/stack-auth/stack-auth/pull/546,Avg.token,111.1470588235294,108.28571428571429,-2.861344537815114,-2.5743771972933023
+2400016065,https://github.com/crewAIInc/crewAI/pull/2397,Total nloc,439.0,439.0,0.0,0.0
+2400016065,https://github.com/crewAIInc/crewAI/pull/2397,Avg.NLOC,21.263157894736842,21.263157894736842,0.0,0.0
+2400016065,https://github.com/crewAIInc/crewAI/pull/2397,AvgCCN,4.315789473684211,4.315789473684211,0.0,0.0
+2400016065,https://github.com/crewAIInc/crewAI/pull/2397,Fun Cnt,19.0,19.0,0.0,0.0
+2400016065,https://github.com/crewAIInc/crewAI/pull/2397,Avg.token,120.05263157894737,120.26315789473684,0.21052631578946546,0.17536168347215447
+2337334370,https://github.com/crewAIInc/crewAI/pull/2136,Total nloc,173.0,177.0,4.0,2.312138728323699
+2337334370,https://github.com/crewAIInc/crewAI/pull/2136,Avg.NLOC,17.1,15.818181818181818,-1.281818181818183,-7.49601275917066
+2337334370,https://github.com/crewAIInc/crewAI/pull/2136,AvgCCN,7.6,7.090909090909091,-0.5090909090909088,-6.698564593301431
+2337334370,https://github.com/crewAIInc/crewAI/pull/2136,Fun Cnt,10.0,11.0,1.0,10.0
+2337334370,https://github.com/crewAIInc/crewAI/pull/2136,Avg.token,128.4,122.27272727272727,-6.127272727272739,-4.772019258000575
+2337335339,https://github.com/crewAIInc/crewAI/pull/2137,Total nloc,93.0,94.0,1.0,1.0752688172043012
+2337335339,https://github.com/crewAIInc/crewAI/pull/2137,Avg.NLOC,8.75,8.875,0.125,1.4285714285714286
+2337335339,https://github.com/crewAIInc/crewAI/pull/2137,AvgCCN,2.125,2.25,0.125,5.88235294117647
+2337335339,https://github.com/crewAIInc/crewAI/pull/2137,Fun Cnt,8.0,8.0,0.0,0.0
+2337335339,https://github.com/crewAIInc/crewAI/pull/2137,Avg.token,59.25,60.0,0.75,1.2658227848101267
+2308221415,https://github.com/calcom/cal.com/pull/19021,Total nloc,167.11111111111111,172.33333333333334,5.2222222222222285,3.1250000000000036
+2308221415,https://github.com/calcom/cal.com/pull/19021,Avg.NLOC,,,,
+2308221415,https://github.com/calcom/cal.com/pull/19021,AvgCCN,,,,
+2308221415,https://github.com/calcom/cal.com/pull/19021,Fun Cnt,9.333333333333334,9.88888888888889,0.5555555555555554,5.95238095238095
+2308221415,https://github.com/calcom/cal.com/pull/19021,Avg.token,,,,
+2389511160,https://github.com/calcom/cal.com/pull/20034,Total nloc,508.0,561.5,53.5,10.531496062992126
+2389511160,https://github.com/calcom/cal.com/pull/20034,Avg.NLOC,6.579027355623101,8.78921568627451,2.210188330651409,33.59445418268947
+2389511160,https://github.com/calcom/cal.com/pull/20034,AvgCCN,1.6291793313069909,1.767156862745098,0.1379775314381071,8.469143254316648
+2389511160,https://github.com/calcom/cal.com/pull/20034,Fun Cnt,27.0,29.5,2.5,9.25925925925926
+2389511160,https://github.com/calcom/cal.com/pull/20034,Avg.token,32.59270516717325,39.77328431372549,7.18057914655224,22.03124628570071
+2432868443,https://github.com/calcom/cal.com/pull/20496,Total nloc,486.0,489.5,3.5,0.720164609053498
+2432868443,https://github.com/calcom/cal.com/pull/20496,Avg.NLOC,8.873015873015873,9.555555555555557,0.6825396825396837,7.692307692307705
+2432868443,https://github.com/calcom/cal.com/pull/20496,AvgCCN,3.888888888888889,3.9523809523809526,0.06349206349206371,1.6326530612244956
+2432868443,https://github.com/calcom/cal.com/pull/20496,Fun Cnt,33.0,33.0,0.0,0.0
+2432868443,https://github.com/calcom/cal.com/pull/20496,Avg.token,46.111111111111114,55.55555555555556,9.444444444444443,20.48192771084337
+2392888093,https://github.com/calcom/cal.com/pull/20080,Total nloc,78.125,115.52380952380952,37.39880952380952,47.87047619047618
+2392888093,https://github.com/calcom/cal.com/pull/20080,Avg.NLOC,,,,
+2392888093,https://github.com/calcom/cal.com/pull/20080,AvgCCN,,,,
+2392888093,https://github.com/calcom/cal.com/pull/20080,Fun Cnt,3.8125,5.071428571428571,1.2589285714285712,33.02107728337236
+2392888093,https://github.com/calcom/cal.com/pull/20080,Avg.token,,,,
+2597070258,https://github.com/calcom/cal.com/pull/21855,Total nloc,348.8333333333333,200.83333333333334,-147.99999999999997,-42.42713807931199
+2597070258,https://github.com/calcom/cal.com/pull/21855,Avg.NLOC,13.565528557464042,,,
+2597070258,https://github.com/calcom/cal.com/pull/21855,AvgCCN,2.5225963552576456,,,
+2597070258,https://github.com/calcom/cal.com/pull/21855,Fun Cnt,18.5,10.166666666666666,-8.333333333333334,-45.04504504504504
+2597070258,https://github.com/calcom/cal.com/pull/21855,Avg.token,67.44092712842713,,,
+2353668916,https://github.com/calcom/cal.com/pull/19491,Total nloc,165.0,165.0,0.0,0.0
+2353668916,https://github.com/calcom/cal.com/pull/19491,Avg.NLOC,13.375,13.375,0.0,0.0
+2353668916,https://github.com/calcom/cal.com/pull/19491,AvgCCN,4.25,4.25,0.0,0.0
+2353668916,https://github.com/calcom/cal.com/pull/19491,Fun Cnt,8.0,8.0,0.0,0.0
+2353668916,https://github.com/calcom/cal.com/pull/19491,Avg.token,92.625,92.625,0.0,0.0
+2439339242,https://github.com/calcom/cal.com/pull/20545,Total nloc,49.0,48.166666666666664,-0.8333333333333357,-1.700680272108848
+2439339242,https://github.com/calcom/cal.com/pull/20545,Avg.NLOC,12.75,12.208333333333334,-0.5416666666666661,-4.248366013071891
+2439339242,https://github.com/calcom/cal.com/pull/20545,AvgCCN,2.5416666666666665,2.5416666666666665,0.0,0.0
+2439339242,https://github.com/calcom/cal.com/pull/20545,Fun Cnt,2.6666666666666665,2.6666666666666665,0.0,0.0
+2439339242,https://github.com/calcom/cal.com/pull/20545,Avg.token,68.01388888888889,61.30555555555555,-6.708333333333336,-9.8631815397182
+2604024784,https://github.com/calcom/cal.com/pull/21923,Total nloc,261.0,291.0,30.0,11.494252873563218
+2604024784,https://github.com/calcom/cal.com/pull/21923,Avg.NLOC,9.736842105263158,12.944444444444445,3.207602339181287,32.94294294294295
+2604024784,https://github.com/calcom/cal.com/pull/21923,AvgCCN,2.789473684210526,3.3333333333333335,0.5438596491228074,19.496855345911964
+2604024784,https://github.com/calcom/cal.com/pull/21923,Fun Cnt,19.0,18.0,-1.0,-5.263157894736842
+2604024784,https://github.com/calcom/cal.com/pull/21923,Avg.token,43.94736842105263,60.666666666666664,16.719298245614034,38.0439121756487
+2496617006,https://github.com/GlareDB/glaredb/pull/3762,Total nloc,169.57142857142858,171.4,1.828571428571422,1.0783487784330203
+2496617006,https://github.com/GlareDB/glaredb/pull/3762,Avg.NLOC,13.561012211522415,13.938652236652239,0.3776400251298231,2.784748064815935
+2496617006,https://github.com/GlareDB/glaredb/pull/3762,AvgCCN,3.15838756859165,3.2008982683982685,0.04251069980661848,1.3459621051375381
+2496617006,https://github.com/GlareDB/glaredb/pull/3762,Fun Cnt,8.877551020408163,8.88,0.0024489795918380963,0.027586206896567062
+2496617006,https://github.com/GlareDB/glaredb/pull/3762,Avg.token,89.56036237005624,92.75982683982684,3.1994644697706036,3.5724112599619384
+2492416622,https://github.com/GlareDB/glaredb/pull/3750,Total nloc,430.75,472.75,42.0,9.75043528728961
+2492416622,https://github.com/GlareDB/glaredb/pull/3750,Avg.NLOC,33.60255681818182,36.83572860962567,3.2331717914438514,9.621802914992566
+2492416622,https://github.com/GlareDB/glaredb/pull/3750,AvgCCN,5.308522727272727,5.761864973262032,0.4533422459893046,8.539894604957468
+2492416622,https://github.com/GlareDB/glaredb/pull/3750,Fun Cnt,11.25,11.75,0.5,4.444444444444445
+2492416622,https://github.com/GlareDB/glaredb/pull/3750,Avg.token,249.47613636363636,273.00701871657753,23.530882352941177,9.432117514695902
+2497503442,https://github.com/GlareDB/glaredb/pull/3774,Total nloc,253.45454545454547,241.25,-12.204545454545467,-4.815279770444768
+2497503442,https://github.com/GlareDB/glaredb/pull/3774,Avg.NLOC,29.992595598845597,29.122774383876358,-0.8698212149692388,-2.900119838253405
+2497503442,https://github.com/GlareDB/glaredb/pull/3774,AvgCCN,5.113104256854257,5.054880691311612,-0.05822356554264463,-1.138712660994431
+2497503442,https://github.com/GlareDB/glaredb/pull/3774,Fun Cnt,9.545454545454545,9.083333333333334,-0.46212121212121104,-4.84126984126983
+2497503442,https://github.com/GlareDB/glaredb/pull/3774,Avg.token,204.4309523809524,196.5545621867168,-7.876390194235597,-3.852836423497223
+2495944314,https://github.com/GlareDB/glaredb/pull/3756,Total nloc,170.0,156.28571428571428,-13.714285714285722,-8.067226890756308
+2495944314,https://github.com/GlareDB/glaredb/pull/3756,Avg.NLOC,,,,
+2495944314,https://github.com/GlareDB/glaredb/pull/3756,AvgCCN,,,,
+2495944314,https://github.com/GlareDB/glaredb/pull/3756,Fun Cnt,9.818181818181818,8.857142857142858,-0.9610389610389607,-9.788359788359784
+2495944314,https://github.com/GlareDB/glaredb/pull/3756,Avg.token,,,,
+2512247973,https://github.com/GlareDB/glaredb/pull/3793,Total nloc,257.57142857142856,265.2857142857143,7.714285714285722,2.995008319467557
+2512247973,https://github.com/GlareDB/glaredb/pull/3793,Avg.NLOC,16.35759240759241,16.93334998334998,0.5757575757575708,3.5198185736082515
+2512247973,https://github.com/GlareDB/glaredb/pull/3793,AvgCCN,3.1157675657675656,3.313170163170163,0.19740259740259747,6.335600882794592
+2512247973,https://github.com/GlareDB/glaredb/pull/3793,Fun Cnt,15.142857142857142,15.285714285714286,0.14285714285714413,0.9433962264151028
+2512247973,https://github.com/GlareDB/glaredb/pull/3793,Avg.token,113.47039627039626,118.92753912753913,5.45714285714287,4.809309772866816
+2623769975,https://github.com/antiwork/gumroad/pull/471,Total nloc,112.0,112.0,0.0,0.0
+2623769975,https://github.com/antiwork/gumroad/pull/471,Avg.NLOC,21.0,21.0,0.0,0.0
+2623769975,https://github.com/antiwork/gumroad/pull/471,AvgCCN,2.2,2.2,0.0,0.0
+2623769975,https://github.com/antiwork/gumroad/pull/471,Fun Cnt,5.0,5.0,0.0,0.0
+2623769975,https://github.com/antiwork/gumroad/pull/471,Avg.token,147.8,149.6,1.799999999999983,1.217861975642749
+2604162624,https://github.com/antiwork/gumroad/pull/361,Total nloc,10.0,11.0,1.0,10.0
+2604162624,https://github.com/antiwork/gumroad/pull/361,Avg.NLOC,6.0,7.0,1.0,16.666666666666664
+2604162624,https://github.com/antiwork/gumroad/pull/361,AvgCCN,1.0,1.0,0.0,0.0
+2604162624,https://github.com/antiwork/gumroad/pull/361,Fun Cnt,1.0,1.0,0.0,0.0
+2604162624,https://github.com/antiwork/gumroad/pull/361,Avg.token,26.0,36.0,10.0,38.46153846153847
+2608906245,https://github.com/antiwork/gumroad/pull/397,Total nloc,110.5,118.5,8.0,7.239819004524888
+2608906245,https://github.com/antiwork/gumroad/pull/397,Avg.NLOC,7.982954545454546,7.75,-0.23295454545454586,-2.9181494661921756
+2608906245,https://github.com/antiwork/gumroad/pull/397,AvgCCN,2.465909090909091,2.513888888888889,0.04797979797979801,1.945724526369689
+2608906245,https://github.com/antiwork/gumroad/pull/397,Fun Cnt,13.5,15.0,1.5,11.11111111111111
+2608906245,https://github.com/antiwork/gumroad/pull/397,Avg.token,60.69602272727273,56.75,-3.9460227272727266,-6.501287151883921
+2441809617,https://github.com/antiwork/gumroad/pull/56,Total nloc,2526.0,1267.0,-1259.0,-49.84164687252573
+2441809617,https://github.com/antiwork/gumroad/pull/56,Avg.NLOC,,,,
+2441809617,https://github.com/antiwork/gumroad/pull/56,AvgCCN,,,,
+2441809617,https://github.com/antiwork/gumroad/pull/56,Fun Cnt,0.0,0.5,,
+2441809617,https://github.com/antiwork/gumroad/pull/56,Avg.token,,,,
+2297969098,https://github.com/yamadashy/repomix/pull/309,Total nloc,62.689655172413794,67.60606060606061,4.9164054336468155,7.8424509117578465
+2297969098,https://github.com/yamadashy/repomix/pull/309,Avg.NLOC,9.18677020616676,,,
+2297969098,https://github.com/yamadashy/repomix/pull/309,AvgCCN,1.3470853858784892,,,
+2297969098,https://github.com/yamadashy/repomix/pull/309,Fun Cnt,6.068965517241379,7.666666666666667,1.597701149425288,26.325757575757585
+2297969098,https://github.com/yamadashy/repomix/pull/309,Avg.token,57.809992163009404,,,
+2531991252,https://github.com/box/box-ui-elements/pull/4109,Total nloc,236.0,251.0,15.0,6.3559322033898304
+2531991252,https://github.com/box/box-ui-elements/pull/4109,Avg.NLOC,28.8,28.75,-0.05000000000000071,-0.17361111111111358
+2531991252,https://github.com/box/box-ui-elements/pull/4109,AvgCCN,8.2,6.75,-1.4499999999999993,-17.682926829268286
+2531991252,https://github.com/box/box-ui-elements/pull/4109,Fun Cnt,5.0,8.0,3.0,60.0
+2531991252,https://github.com/box/box-ui-elements/pull/4109,Avg.token,133.4,131.125,-2.2750000000000057,-1.7053973013493298
+2311607019,https://github.com/wolfSSL/wolfssl/pull/8412,Total nloc,1793.5,1880.0,86.5,4.822971842765543
+2311607019,https://github.com/wolfSSL/wolfssl/pull/8412,Avg.NLOC,40.212745098039214,41.002496878901376,0.7897517808621615,1.9639340187712528
+2311607019,https://github.com/wolfSSL/wolfssl/pull/8412,AvgCCN,12.274183006535948,12.496878901373284,0.22269589483733654,1.814343934083042
+2311607019,https://github.com/wolfSSL/wolfssl/pull/8412,Fun Cnt,51.5,53.5,2.0,3.8834951456310676
+2311607019,https://github.com/wolfSSL/wolfssl/pull/8412,Avg.token,264.91372549019604,270.7996254681648,5.885899977968734,2.2218176755762546
+2398994327,https://github.com/medplum/medplum/pull/6182,Total nloc,1806.0,1811.0,5.0,0.2768549280177187
+2398994327,https://github.com/medplum/medplum/pull/6182,Avg.NLOC,4.484375,4.515625,0.03125,0.6968641114982579
+2398994327,https://github.com/medplum/medplum/pull/6182,AvgCCN,1.421875,1.421875,0.0,0.0
+2398994327,https://github.com/medplum/medplum/pull/6182,Fun Cnt,64.0,64.0,0.0,0.0
+2398994327,https://github.com/medplum/medplum/pull/6182,Avg.token,29.390625,29.546875,0.15625,0.531632110579479
+2503287360,https://github.com/noneback/go-taskflow/pull/89,Total nloc,69.33333333333333,67.66666666666667,-1.6666666666666572,-2.4038461538461404
+2503287360,https://github.com/noneback/go-taskflow/pull/89,Avg.NLOC,8.950000000000001,8.950000000000001,0.0,0.0
+2503287360,https://github.com/noneback/go-taskflow/pull/89,AvgCCN,2.2759259259259257,2.2759259259259257,0.0,0.0
+2503287360,https://github.com/noneback/go-taskflow/pull/89,Fun Cnt,6.0,6.0,0.0,0.0
+2503287360,https://github.com/noneback/go-taskflow/pull/89,Avg.token,64.28703703703704,64.28703703703704,0.0,0.0

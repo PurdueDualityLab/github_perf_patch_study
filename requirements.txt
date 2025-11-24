@@ -1,0 +1,13 @@
+pandas
+numpy
+matplotlib
+seaborn
+scipy
+wordcloud
+pyarrow
+datasets
+fsspec
+tqdm
+python-dotenv
+ollama
+pydantic
