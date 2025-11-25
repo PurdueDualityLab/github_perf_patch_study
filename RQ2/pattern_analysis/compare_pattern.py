@@ -12,6 +12,11 @@ key = "id"
 df_gpt = pd.read_csv(gpt_csv)
 df_qwen = pd.read_csv(qwen_csv)
 
+# Normalize missing/whitespace values so NaN vs '' don't register as mismatches
+for col in ["optimization_pattern", "optimization_subpattern"]:
+    df_gpt[col] = df_gpt[col].fillna("").str.strip()
+    df_qwen[col] = df_qwen[col].fillna("").str.strip()
+
 # Keep comparison columns for quick stats
 merged_compare = df_gpt[[key, "optimization_pattern", "optimization_subpattern"]].merge(
     df_qwen[[key, "optimization_pattern", "optimization_subpattern"]],
