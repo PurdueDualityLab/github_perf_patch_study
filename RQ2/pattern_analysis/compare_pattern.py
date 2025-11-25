@@ -52,4 +52,4 @@ not_matched.to_csv(unmatched_csv, index=False)
 # Comparison Summary:
 # Total PRs Analyzed: 340
 # Pattern Matches: 141 (41.47%)
-# Subpattern Matches: 101 (29.71%)
+# Subpattern Matches: 106 (31.18%)
