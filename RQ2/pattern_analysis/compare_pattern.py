@@ -2,33 +2,35 @@ import pandas as pd
 
 # Input CSVs
 # gpt_csv = "./human_perf_prs_with_gpt_analysis_full_catalog.csv"
-# qwen_csv = "./human_perf_prs_with_gemini_analysis_full_catalog.csv"
+# gemini_csv = "./human_perf_prs_with_gemini_analysis_full_catalog.csv"
 
 gpt_csv = "./ai_perf_prs_with_gpt_analysis_full_catalog.csv"
-qwen_csv = "./ai_perf_prs_with_gemini_analysis_full_catalog.csv"
+gemini_csv = "./ai_perf_prs_with_gemini_analysis_full_catalog.csv"
 
 # Output CSV for mismatches
+# unmatched_csv = "./human_perf_prs_pattern_mismatches_gpt_gemini_full_catalog.csv"
+
 unmatched_csv = "./ai_perf_prs_pattern_mismatches_gpt_gemini_full_catalog.csv"
 
 key = "id"
 
 df_gpt = pd.read_csv(gpt_csv)
-df_qwen = pd.read_csv(qwen_csv)
+df_gemini = pd.read_csv(gemini_csv)
 
 # Normalize missing/whitespace values so NaN vs '' don't register as mismatches
 for col in ["optimization_pattern", "optimization_subpattern"]:
     df_gpt[col] = df_gpt[col].fillna("").str.strip()
-    df_qwen[col] = df_qwen[col].fillna("").str.strip()
+    df_gemini[col] = df_gemini[col].fillna("").str.strip()
 
 # Keep comparison columns for quick stats
 merged_compare = df_gpt[[key, "optimization_pattern", "optimization_subpattern"]].merge(
-    df_qwen[[key, "optimization_pattern", "optimization_subpattern"]],
+    df_gemini[[key, "optimization_pattern", "optimization_subpattern"]],
     on=key,
-    suffixes=("_gpt", "_qwen")
+    suffixes=("_gpt", "_gemini")
 )
 
-merged_compare["pattern_match"] = merged_compare["optimization_pattern_gpt"] == merged_compare["optimization_pattern_qwen"]
-merged_compare["subpattern_match"] = merged_compare["optimization_subpattern_gpt"] == merged_compare["optimization_subpattern_qwen"]
+merged_compare["pattern_match"] = merged_compare["optimization_pattern_gpt"] == merged_compare["optimization_pattern_gemini"]
+merged_compare["subpattern_match"] = merged_compare["optimization_subpattern_gpt"] == merged_compare["optimization_subpattern_gemini"]
 
 summary = {
     "total": len(merged_compare),
@@ -42,10 +44,10 @@ print(f"Pattern Matches: {summary['pattern_match_count']} ({(summary['pattern_ma
 print(f"Subpattern Matches: {summary['subpattern_match_count']} ({(summary['subpattern_match_count'] / summary['total']) * 100:.2f}%)")
 
 # Build full merge to export mismatches with all data from both CSVs
-full_merged = df_gpt.merge(df_qwen, on=key, suffixes=("_gpt", "_qwen"), how="inner")
+full_merged = df_gpt.merge(df_gemini, on=key, suffixes=("_gpt", "_gemini"), how="inner")
 not_matched = full_merged[
-    (full_merged["optimization_pattern_gpt"] != full_merged["optimization_pattern_qwen"])
-    | (full_merged["optimization_subpattern_gpt"] != full_merged["optimization_subpattern_qwen"])
+    (full_merged["optimization_pattern_gpt"] != full_merged["optimization_pattern_gemini"])
+    | (full_merged["optimization_subpattern_gpt"] != full_merged["optimization_subpattern_gemini"])
 ].copy()
 
 print(f"Saving mismatched rows to {unmatched_csv} ({len(not_matched)} rows)...")
