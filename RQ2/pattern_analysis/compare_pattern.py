@@ -1,11 +1,14 @@
 import pandas as pd
 
 # Input CSVs
-gpt_csv = "./human_perf_prs_with_gpt_analysis.csv"
-qwen_csv = "./human_perf_prs_with_gemini_analysis.csv"
+# gpt_csv = "./human_perf_prs_with_gpt_analysis_full_catalog.csv"
+# qwen_csv = "./human_perf_prs_with_gemini_analysis_full_catalog.csv"
+
+gpt_csv = "./ai_perf_prs_with_gpt_analysis_full_catalog.csv"
+qwen_csv = "./ai_perf_prs_with_gemini_analysis_full_catalog.csv"
 
 # Output CSV for mismatches
-unmatched_csv = "./human_perf_prs_pattern_mismatches_gpt_gemini.csv"
+unmatched_csv = "./ai_perf_prs_pattern_mismatches_gpt_gemini_full_catalog.csv"
 
 key = "id"
 
@@ -55,7 +58,17 @@ not_matched.to_csv(unmatched_csv, index=False)
 # Subpattern Matches: 150 (46.01%)
 # Saving mismatched rows to ./ai_perf_prs_pattern_mismatches_gpt_gemini.csv (176 rows)...
 
+# Total PRs Analyzed: 326
+# Pattern Matches: 205 (62.88%)
+# Subpattern Matches: 176 (53.99%)
+# Saving mismatched rows to ./ai_perf_prs_pattern_mismatches_gpt_gemini_full_catalog.csv (153 rows)...
+
 # Total PRs Analyzed: 83
 # Pattern Matches: 36 (43.37%)
 # Subpattern Matches: 30 (36.14%)
 # Saving mismatched rows to ./human_perf_prs_pattern_mismatches_gpt_gemini.csv (53 rows)...
+
+# Total PRs Analyzed: 83
+# Pattern Matches: 46 (55.42%)
+# Subpattern Matches: 35 (42.17%)
+# Saving mismatched rows to ./human_perf_prs_pattern_mismatches_gpt_gemini_full_catalog.csv (48 rows)...
