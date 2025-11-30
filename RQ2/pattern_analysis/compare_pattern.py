@@ -1,16 +1,17 @@
 import pandas as pd
 
 # Input CSVs
-# gpt_csv = "./human_perf_prs_with_gpt_analysis_full_catalog.csv"
-# gemini_csv = "./human_perf_prs_with_gemini_analysis_full_catalog.csv"
+gpt_csv = "./human_perf_prs_with_gpt_analysis_full_catalog.csv"
+gemini_csv = "./human_perf_prs_with_gemini_analysis_full_catalog.csv"
 
-gpt_csv = "./ai_perf_prs_with_gpt_analysis_full_catalog.csv"
-gemini_csv = "./ai_perf_prs_with_gemini_analysis_full_catalog.csv"
+# gpt_csv = "./ai_perf_prs_with_gpt_analysis_full_catalog.csv"
+# gemini_csv = "./ai_perf_prs_with_gemini_analysis_full_catalog.csv"
 
 # Output CSV for mismatches
-# unmatched_csv = "./human_perf_prs_pattern_mismatches_gpt_gemini_full_catalog.csv"
+unmatched_csv = "./human_perf_prs_pattern_mismatches_gpt_gemini_full_catalog.csv"
+# unmatched_csv = "./ai_perf_prs_pattern_mismatches_gpt_gemini_full_catalog.csv"
 
-unmatched_csv = "./ai_perf_prs_pattern_mismatches_gpt_gemini_full_catalog.csv"
+unmatched_ids_urls_csv = unmatched_csv.replace(".csv", "_ids_urls.csv")
 
 key = "id"
 
@@ -52,6 +53,23 @@ not_matched = full_merged[
 
 print(f"Saving mismatched rows to {unmatched_csv} ({len(not_matched)} rows)...")
 not_matched.to_csv(unmatched_csv, index=False)
+
+html_url_col = None
+if "html_url" in not_matched.columns:
+    html_url_col = "html_url"
+elif "html_url_gpt" in not_matched.columns:
+    html_url_col = "html_url_gpt"
+elif "html_url_gemini" in not_matched.columns:
+    html_url_col = "html_url_gemini"
+else:
+    raise ValueError("No html_url column found in mismatched data")
+
+not_matched_urls = not_matched[[key, html_url_col]].copy()
+if html_url_col != "html_url":
+    not_matched_urls.rename(columns={html_url_col: "html_url"}, inplace=True)
+
+print(f"Saving mismatch ids/html_urls to {unmatched_ids_urls_csv} ({len(not_matched_urls)} rows)...")
+not_matched_urls.to_csv(unmatched_ids_urls_csv, index=False)
 
 
 # Comparison Summary:
