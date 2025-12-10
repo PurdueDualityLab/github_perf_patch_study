@@ -20752,7 +20752,7 @@ Other noteworthy changes:
 
 Overall, the main optimization is specializing generic, defensive iteration code into simpler, idiomatic `for-of` and `for-in` loops, and emitting `const` where possible, which improves both readability and runtime efficiency.
 
-""high_level_pattern"":""Code Smells and Structural Simplification"",""sub_pattern"":""Remove Unnecessary Method Calls""}```**Note**: The above JSON is invalid due to the trailing ``` and formatting. Let's correct it. Here's the valid JSON response:```json{",Detailed comparison highlighting specific optimizations,Single most representative high-level optimization pattern (or 'No Meaningful Change'),Most representative sub-pattern within the category (or null if No Meaningful Change),True,,23347
+""high_level_pattern"":""Code Smells and Structural Simplification"",""sub_pattern"":""Remove Unnecessary Method Calls""}```**Note**: The above JSON is invalid due to the trailing ``` and formatting. Let's correct it. Here's the valid JSON response:```json{",Detailed comparison highlighting specific optimizations,Code Smells and Structural Simplification,Remove Unnecessary Method Calls,True,,23347
 3220760486,299,Reduce memory allocations in display code,"## Summary
 - store timezone data as flash strings
 - place Serial message literals in flash using `F()`
@@ -27872,7 +27872,7 @@ Other noteworthy changes (structure/readability):
 - The `bench` Makefile target provides a clear, discoverable way to run benchmarks (`make bench`), which is a usability improvement.
 - The mutability fixes in templates make the benchmark code more idiomatic and less error-prone, but they don’t materially change performance characteristics.
 
-Net effect: the commit primarily narrows the benchmark scope to Mochi, simplifies the benchmark harness, and fixes template mutability. It doesn’t introduce a more efficient algorithm or micro-optimization; it mostly removes work (fewer benchmarks) and cleans up structure.",Remove code bloat by removing optional features,Remove code bloat by removing optional features,True,,18524
+Net effect: the commit primarily narrows the benchmark scope to Mochi, simplifies the benchmark harness, and fixes template mutability. It doesn’t introduce a more efficient algorithm or micro-optimization; it mostly removes work (fewer benchmarks) and cleans up structure.",Code Smells and Structural Simplification,Remove code bloat by removing optional features,True,,18524
 3239403987,9329,Lua compiler improvements,"## Summary
 - optimize Lua compiler to skip helper calls when indexing simple lists or strings
 - update runtime boolean printing to match golden expectations
@@ -76061,7 +76061,7 @@ Other noteworthy changes:
   - Bumps `dockerImageTag` from `1.5.18` to `1.5.19` and updates changelog entries to document the Debezium upgrade.
 
 Net effect:
-- This is a performance-oriented dependency upgrade: the connector’s behavior is the same at the API level, but it now uses a Debezium version with a known performance/stability fix for large MongoDB syncs. There are no local code-level optimizations beyond that.",Performance-Optimized Dependency Selection,Performance-Optimized Dependency Selection,True,,18443
+- This is a performance-oriented dependency upgrade: the connector’s behavior is the same at the API level, but it now uses a Debezium version with a known performance/stability fix for large MongoDB syncs. There are no local code-level optimizations beyond that.",Build & Compilation & Infrastructure Optimization,Performance-Optimized Dependency Selection,True,,18443
 3049300237,21192,perf: Optimize team bookings query by using batch version,"# Optimize Team Bookings Query by Using Batch Version
 
 ## What's being changed and why

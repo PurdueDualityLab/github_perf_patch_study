@@ -1,15 +1,15 @@
 import pandas as pd
 
 # Input CSVs
-gpt_csv = "./human_perf_prs_with_gpt_analysis_full_catalog.csv"
-gemini_csv = "./human_perf_prs_with_gemini_analysis_full_catalog.csv"
+gpt_csv = "./human_perf_prs_with_gpt_analysis_new_catalog.csv"
+gemini_csv = "./human_perf_prs_with_gemini_analysis_new_catalog.csv"
 
-# gpt_csv = "./ai_perf_prs_with_gpt_analysis_full_catalog.csv"
-# gemini_csv = "./ai_perf_prs_with_gemini_analysis_full_catalog.csv"
+# gpt_csv = "./ai_perf_prs_with_gpt_analysis_new_catalog.csv"
+# gemini_csv = "./ai_perf_prs_with_gemini_analysis_new_catalog.csv"
 
 # Output CSV for mismatches
-unmatched_csv = "./human_perf_prs_pattern_mismatches_gpt_gemini_full_catalog.csv"
-# unmatched_csv = "./ai_perf_prs_pattern_mismatches_gpt_gemini_full_catalog.csv"
+unmatched_csv = "./human_perf_prs_pattern_mismatches_gpt_gemini_new_catalog.csv"
+# unmatched_csv = "./ai_perf_prs_pattern_mismatches_gpt_gemini_new_catalog.csv"
 
 unmatched_ids_urls_csv = unmatched_csv.replace(".csv", "_ids_urls.csv")
 
@@ -92,3 +92,13 @@ not_matched_urls.to_csv(unmatched_ids_urls_csv, index=False)
 # Pattern Matches: 46 (55.42%)
 # Subpattern Matches: 35 (42.17%)
 # Saving mismatched rows to ./human_perf_prs_pattern_mismatches_gpt_gemini_full_catalog.csv (48 rows)...
+
+# Total PRs Analyzed: 137
+# Pattern Matches: 61 (44.53%)
+# Subpattern Matches: 38 (27.74%)
+# Saving mismatched rows to ./ai_perf_prs_pattern_mismatches_gpt_gemini_new_catalog.csv (102 rows)...
+
+# Total PRs Analyzed: 45
+# Pattern Matches: 25 (55.56%)
+# Subpattern Matches: 15 (33.33%)
+# Saving mismatched rows to ./human_perf_prs_pattern_mismatches_gpt_gemini_new_catalog.csv (31 rows)...
