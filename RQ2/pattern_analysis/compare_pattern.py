@@ -2,14 +2,14 @@ import pandas as pd
 from sklearn.metrics import cohen_kappa_score
 
 # Input CSVs
-gpt_csv = "./llm_data/final_data/human_perf_prs_with_gpt_analysis_full_catalog.csv"
-gemini_csv = "./llm_data/final_data/human_perf_prs_with_gemini_analysis_full_catalog.csv"
+gpt_csv = "./ai_perf_prs_with_gpt_analysis_new_full_catalog.csv"
+gemini_csv = "./ai_perf_prs_with_gemini_analysis_new_full_catalog.csv"
 
 # gpt_csv = "./llm_data/final_data/ai_perf_prs_with_gpt_analysis_full_catalog.csv"
 # gemini_csv = "./llm_data/final_data/ai_perf_prs_with_gemini_analysis_full_catalog.csv"
 
 # Output CSV for mismatches
-unmatched_csv = "./llm_data/final_data/human_perf_prs_pattern_mismatches_gpt_gemini_full_catalog.csv"
+unmatched_csv = "./ai_perf_prs_pattern_mismatches_gpt_gemini_new_full_catalog.csv"
 # unmatched_csv = "./llm_data/final_data/ai_perf_prs_pattern_mismatches_gpt_gemini_full_catalog.csv"
 
 # # Input CSVs
@@ -74,6 +74,40 @@ not_matched = full_merged[
 print(f"Saving mismatched rows to {unmatched_csv} ({len(not_matched)} rows)...")
 not_matched.to_csv(unmatched_csv, index=False)
 
+if not not_matched.empty:
+    pattern_mismatches = not_matched[
+        not_matched["optimization_pattern_gpt"] != not_matched["optimization_pattern_gemini"]
+    ]
+    subpattern_mismatches = not_matched[
+        not_matched["optimization_subpattern_gpt"] != not_matched["optimization_subpattern_gemini"]
+    ]
+
+    if not pattern_mismatches.empty:
+        print("\nUnmatched High-Level Patterns (GPT vs Gemini):")
+        print(
+            pattern_mismatches[[
+                key,
+                "optimization_pattern_gpt",
+                "optimization_pattern_gemini"
+            ]]
+        )
+    else:
+        print("\nNo unmatched high-level patterns detected.")
+
+    if not subpattern_mismatches.empty:
+        print("\nUnmatched Subpatterns (GPT vs Gemini):")
+        print(
+            subpattern_mismatches[[
+                key,
+                "optimization_subpattern_gpt",
+                "optimization_subpattern_gemini"
+            ]]
+        )
+    else:
+        print("\nNo unmatched subpatterns detected.")
+else:
+    print("No unmatched patterns or subpatterns detected.")
+
 html_url_col = None
 if "html_url" in not_matched.columns:
     html_url_col = "html_url"
@@ -130,3 +164,17 @@ not_matched_urls.to_csv(unmatched_ids_urls_csv, index=False)
 # Saving mismatched rows to ./human_perf_prs_pattern_mismatches_gpt_gemini_new_catalog.csv (31 rows)...
 # Pattern Cohen's Kappa: 0.4675
 # Subpattern Cohen's Kappa: 0.2707
+
+# Total PRs Analyzed: 83
+# Pattern Matches: 57 (68.67%)
+# Subpattern Matches: 43 (51.81%)
+# Pattern Cohen's Kappa: 0.6098
+# Subpattern Cohen's Kappa: 0.4707
+# Saving mismatched rows to ./human_perf_prs_pattern_mismatches_gpt_gemini_new_full_catalog.csv (40 rows)...
+
+# Total PRs Analyzed: 324
+# Pattern Matches: 226 (69.75%)
+# Subpattern Matches: 169 (52.16%)
+# Pattern Cohen's Kappa: 0.6196
+# Subpattern Cohen's Kappa: 0.4745
+# Saving mismatched rows to ./ai_perf_prs_pattern_mismatches_gpt_gemini_new_full_catalog.csv (155 rows)...
