@@ -2,14 +2,14 @@ import pandas as pd
 from sklearn.metrics import cohen_kappa_score
 
 # Input CSVs
-gpt_csv = "./ai_perf_prs_with_gpt_analysis_new_full_catalog.csv"
-gemini_csv = "./ai_perf_prs_with_gemini_analysis_new_full_catalog.csv"
+gpt_csv = "./llm_data/round1_llm/ai_perf_prs_with_gpt_analysis_full_catalog.csv"
+gemini_csv = "./llm_data/round1_llm/ai_perf_prs_with_gemini_analysis_full_catalog.csv"
 
 # gpt_csv = "./llm_data/final_data/ai_perf_prs_with_gpt_analysis_full_catalog.csv"
 # gemini_csv = "./llm_data/final_data/ai_perf_prs_with_gemini_analysis_full_catalog.csv"
 
 # Output CSV for mismatches
-unmatched_csv = "./ai_perf_prs_pattern_mismatches_gpt_gemini_new_full_catalog.csv"
+unmatched_csv = "./ai_perf_prs_pattern_mismatches_gpt_gemini_full_catalog.csv"
 # unmatched_csv = "./llm_data/final_data/ai_perf_prs_pattern_mismatches_gpt_gemini_full_catalog.csv"
 
 # # Input CSVs
@@ -118,7 +118,7 @@ elif "html_url_gemini" in not_matched.columns:
 else:
     raise ValueError("No html_url column found in mismatched data")
 
-not_matched_urls = not_matched[[key, html_url_col]].copy()
+not_matched_urls = not_matched[[key, html_url_col, "optimization_pattern_gpt", "optimization_pattern_gemini", "optimization_subpattern_gpt", "optimization_subpattern_gemini"]].copy()
 if html_url_col != "html_url":
     not_matched_urls.rename(columns={html_url_col: "html_url"}, inplace=True)
 
@@ -137,12 +137,12 @@ not_matched_urls.to_csv(unmatched_ids_urls_csv, index=False)
 # Subpattern Matches: 30 (36.14%)
 # Saving mismatched rows to ./human_perf_prs_pattern_mismatches_gpt_gemini.csv (53 rows)...
 
-# Total PRs Analyzed: 326
-# Pattern Matches: 205 (62.88%)
-# Subpattern Matches: 176 (53.99%)
+# Total PRs Analyzed: 324
+# Pattern Matches: 207 (63.89%)
+# Subpattern Matches: 175 (54.01%)
 # Saving mismatched rows to ./ai_perf_prs_pattern_mismatches_gpt_gemini_full_catalog.csv (153 rows)...
-# Pattern Cohen's Kappa: 0.5221
-# Subpattern Cohen's Kappa: 0.4774
+# Pattern Cohen's Kappa: 0.5335
+# Subpattern Cohen's Kappa: 0.4773
 
 # Total PRs Analyzed: 83
 # Pattern Matches: 46 (55.42%)
