@@ -1,90 +1,99 @@
 # GitHub Performance Patch Study
 
-Analysis of performance-focused pull requests (PRs) raised by AI coding agents versus human developers. The project currently lives in two notebooks:
+Comparison of performance-focused pull requests opened by AI coding agents and human developers. The repository now hosts the entire analysis pipeline: raw data filtering, LLM-based optimization-pattern labeling, language/time-to-merge statistics, cyclomatic-complexity deltas, and validation of test evidence. Use this README to navigate the code and reproduce the study end to end.
 
-- `optimization_pattern_detection.ipynb` maps each optimization-focused PR to a standardized optimization pattern catalog with GPT.
-- `Performance_PR_Analysis_AI_vs_Human.ipynb` is the main exploratory data analysis (EDA) workbook covering the research questions that compare AI and human behavior.
+## Repository Layout
+
+```
+.
+├── datasets/
+│   ├── ai_pr/                        # AI PR extracts + cached parquet files
+│   ├── human_pr/                     # Human PR extracts + cached parquet files
+│   ├── pr_filtering/                 # Notebook that filters valid perf PR ids
+│   └── performance_prs_*.csv         # Unified AI vs human datasets
+├── RQ1_merge_time_and_language/      # Merge/review latency and language mix
+├── RQ2_pattern_analysis/             # LLM prompts, catalogs, and pattern stats
+├── RQ3_complexity_analysis/          # Lizard-based maintainability deltas
+├── RQ4_test_and_validation/          # Evidence of testing/validation signals
+├── ai_pr_* / human_pr_* .parquet     # Convenience caches outside datasets/
+├── human_pr.ipynb                    # Legacy EDA / sanity-check notebook
+└── requirements.txt
+```
+
+Key sub-folders:
+- **datasets/** contains notebook-driven pipelines (`ai_pr/ai_pr.ipynb`, `human_pr/human_pr.ipynb`, `pr_filtering/get_valid_pr.ipynb`) that read Hugging Face parquet dumps, filter to performance work, and materialize curated CSVs such as `performance_prs_ai_vs_human.csv`.
+- **RQ1_merge_time_and_language** holds `rq1_analysis.ipynb`, which generates descriptive figures (e.g., `review_time_distribution.png`) about merge time, review latency, description quality, and programming-language mix.
+- **RQ2_pattern_analysis** keeps the optimization-pattern taxonomy (`catalog/`), multi-model labeling notebooks (`optimization_pattern_detection_gpt.ipynb`, `optimization_pattern_detection_gemini.ipynb`), the Qwen/Ollama script (`optimization_pattern_detection_qwen.py`), and comparison utilities like `compare_pattern.py`. Intermediate model transcripts live in `llm_data/`, and chart-ready tables in `results/`.
+- **RQ3_complexity_analysis** provides CLI scripts (`ai.py`, `human.py`) that download patches via the GitHub API and call `lizard` to compute NLOC/CCN deltas per PR. Outputs land in `RQ3_complexity_analysis/data/` with plots in `results/`.
+- **RQ4_test_and_validation** hosts notebooks (`validation-gpt.ipynb`, `validation-gemini2.ipynb`, `analysis.ipynb`) plus parquet checkpoints that compare the narrative evidence AI vs human authors supply for testing/benchmarking. Mismatched cases are logged under `unmatched_data/`.
 
 ## Data Sources
 
-Both notebooks expect direct access to the Hugging Face dataset `hao-li/AIDev` via pandas’ `hf://` protocol:
+1. **Hugging Face `hao-li/AIDev` dataset** – All notebooks reference the following parquet tables via the `hf://` URI scheme (downloaded on demand with `datasets`/`fsspec`):
+   - `pull_request.parquet`, `human_pull_request.parquet`
+   - `pr_task_type.parquet`, `human_pr_task_type.parquet`
+   - `pr_commit_details.parquet`
+   - `all_repository.parquet`
+2. **Local caches** – Frequently accessed aggregates are stored at the repo root (`ai_pr_commits.parquet`, `ai_pr_commit_details.parquet`, `human_pr_commits.parquet`, etc.) to avoid re-downloading. The curated join of AI and human PRs sits in `datasets/performance_prs_ai_vs_human.csv` and `datasets/performance_prs_ai_vs_human_raw.csv`.
+3. **LLM outputs** – Intermediate GPT/Gemini/Qwen responses are saved under `RQ2_pattern_analysis/llm_data/`. Validation evidence for RQ4 is persisted as parquet files in `RQ4_test_and_validation/` so notebooks can focus on analysis rather than regeneration.
 
-- `pull_request.parquet` / `human_pull_request.parquet`
-- `pr_task_type.parquet` / `human_pr_task_type.parquet`
-- `pr_commit_details.parquet`
-- `all_repository.parquet`
+Authenticate with Hugging Face (`huggingface-cli login`) before running notebooks so `hf://` reads succeed. Large parquet files are intentionally kept out of Git history—expect long downloads on first run.
 
-Make sure you are authenticated with Hugging Face (`huggingface-cli login`) or have the files cached locally, otherwise pandas will not be able to stream them.
+## Environment & Credentials
 
-## Notebook 1: Optimization Pattern Detection
+1. Use Python 3.10+ and install dependencies:
+   ```bash
+   python -m venv .venv && source .venv/bin/activate
+   pip install -r requirements.txt
+   pip install lizard PyGithub huggingface_hub  # used by RQ3 scripts
+   ```
+2. Create a `.env` in the repo root for GitHub API access (used by `RQ3_complexity_analysis/*.py` and any notebook touching the GitHub REST API):
+   ```
+   GITHUB_TOKEN=ghp_your_personal_access_token
+   ```
+3. LLM-specific tooling:
+   - `optimization_pattern_detection_qwen.py` calls a local Ollama endpoint; configure `OLLAMA_HOST` or update the client block if you point at a remote model server.
+   - The GPT/Gemini notebooks expect API keys to be loaded via environment variables (e.g., `OPENAI_API_KEY`, `GOOGLE_API_KEY`). Store them in `.env` and load with `python-dotenv` inside the notebooks.
 
-This notebook builds the labeled dataset that downstream analysis relies on.
+## Running the Research Questions
 
-1. **Load & stitch datasets.** AI-agent and human PRs are read from the Hugging Face parquet dumps, filtered to `type == 'perf'`, and enriched with repository metadata and aggregated commit stats (additions, deletions, concatenated patches, commit counts).
-2. **Call GPT with taxonomy prompts.** The function `analyze_optimization_with_gpt` composes a context from PR title, description, and git patches (with automatic truncation for long patches). GPT is asked to:
-   - explain the optimization,
-   - contrast original vs. optimized code,
-   - classify the change into a high-level optimization pattern **and** a representative sub-pattern chosen from the catalog below.
-3. **Batching + resiliency.**
-   - `batch_analyze_performance_prs` processes PRs in configurable batches, throttles requests, tracks token usage, and writes rolling checkpoints (`perf_prs_checkpoint_*.parquet`) plus a master CSV (`perf_prs_with_gpt_analysis.csv`).
-   - Resume mode skips PRs already seen in either the checkpoint folder or the consolidated CSV, so interrupted runs can restart safely.
-4. **Outputs.** Besides the CSV, the notebook prints counts by author type, confidence scores, and pattern distribution samples for quick validation.
+1. **Prepare datasets** (once per machine)
+   - Run `datasets/pr_filtering/get_valid_pr.ipynb` to regenerate `valid_perf_pr_ids.csv` if you adjust filtering rules.
+   - Execute `datasets/ai_pr/ai_pr.ipynb` and `datasets/human_pr/human_pr.ipynb` to download/cross-check PR metadata, commit histories, comments, reviews, and workflow runs. These notebooks output the parquet bundles under each folder and refresh `performance_prs_ai_vs_human_raw.csv`.
+   - Optionally, use `human_pr.ipynb` in the repo root for rapid EDA on the human subset before joining with AI data.
+2. **RQ1 – Merge time & language diversity**
+   - Open `RQ1_merge_time_and_language/rq1_analysis.ipynb`.
+   - Point the intake cell to `datasets/performance_prs_ai_vs_human.csv` (already includes additions/deletions, language, merge timestamps, and metadata).
+   - Running the full notebook recreates the summary tables plus `review_time_distribution.png` under the same folder.
+3. **RQ2 – Optimization pattern analysis**
+   - Choose a labeling notebook (`optimization_pattern_detection_gpt.ipynb` or `optimization_pattern_detection_gemini.ipynb`) to send batched prompts that classify each performance PR into the updated catalog defined in `RQ2_pattern_analysis/catalog/updated_optimization_catalog.csv`.
+   - For local models, execute `python RQ2_pattern_analysis/optimization_pattern_detection_qwen.py` (uses Ollama) to replicate the same pipeline without external APIs.
+   - Merge the resulting CSVs and evaluate agreement via `python RQ2_pattern_analysis/compare_pattern.py`, which produces Cohen’s kappa scores and mismatch exports under `RQ2_pattern_analysis/`.
+   - Figures and aggregate stats are written to `RQ2_pattern_analysis/results/` for downstream storytelling.
+4. **RQ3 – Maintainability & complexity impact**
+   - Ensure `GITHUB_TOKEN` is set, then run:
+     ```bash
+     python RQ3_complexity_analysis/ai.py
+     python RQ3_complexity_analysis/human.py
+     ```
+   - The scripts iterate over perf PR URLs, fetch files pre/post change, and call `lizard` to compute `Total nloc`, `Avg.NLOC`, `AvgCCN`, `Fun Cnt`, and `Avg.token`. Results and skip logs save under `RQ3_complexity_analysis/data/`.
+   - Use `RQ3_complexity_analysis/analyze_result.ipynb` to load those CSVs and regenerate plots in `RQ3_complexity_analysis/results/` (box plots, CCN distributions, etc.).
+5. **RQ4 – Testing & validation evidence**
+   - Start with `RQ4_test_and_validation/validation-gpt.ipynb` or `validation-gemini2.ipynb` to summarize the qualitative validation statements extracted from PR descriptions/reviews.
+   - `analysis.ipynb` aligns GPT vs Gemini interpretations and exports disagreement lists to `unmatched_data/` for manual inspection.
+   - Use the provided parquet files (`rq3_validation_evidence_*.parquet`) if you simply want to replicate figures without rerunning LLMs.
 
-### Optimization Pattern Catalog (High-Level Buckets)
+## Outputs & Reuse
 
-- Algorithm-Level Optimizations (e.g., pick more efficient algorithms, ILP-friendly structures, space-efficient implementations).
-- Control-Flow & Branching (branch prediction, removal/rearrangement, masking, combining branches).
-- Memory & Data Locality (cache locality, prefetching, smaller data types, object/structure tuning).
-- Loop Transformations (unrolling, fusion/fission, peeling, stripping, invariant extraction).
-- I/O & Synchronization (I/O batch sizing, polling vs. blocking, non-blocking primitives).
-- Data Structure Selection & Adaptation (energy-aware structures, cross-library comparisons, method-call based choices).
-- Code Smells & Structural Simplification (pruning optional features, redundant calls, long methods, duplicates, feature envy, god classes, type checking).
-- No Meaningful Change (fallback when patches cannot be categorized).
+- Final, analysis-ready tables: `datasets/performance_prs_ai_vs_human.csv`, `RQ2_pattern_analysis/ai_perf_prs_with_*_analysis_*.csv`, `RQ3_complexity_analysis/data/*deltas.csv`, and `RQ4_test_and_validation/rq3_validation_evidence_*.parquet`.
+- Visualizations: PNGs in each RQ folder plus `RQ2_pattern_analysis/results/` summaries (pattern frequency, additions/deletions distributions, etc.).
+- Intermediate audit artifacts: mismatch CSVs in `RQ2_pattern_analysis/`, skip logs from `RQ3_complexity_analysis`, and `unmatched_data/` exports from RQ4.
 
-Use this notebook first—`perf_prs_with_gpt_analysis.csv` is an input to the main analysis.
+## Troubleshooting
 
-## Notebook 2: Performance PR Analysis (AI vs Human)
+- **Huge parquet pulls** – First-run downloads from Hugging Face can take minutes. Cache them locally or mount a shared volume if running on a remote machine.
+- **LLM rate limits / token overflows** – Adjust batch sizes and truncation thresholds inside the RQ2 notebooks/scripts. The helpers already log skipped PRs and allow resumes.
+- **GitHub API quotas** – RQ3 scripts use GraphQL/REST calls per file. Create a PAT with the `repo` scope and consider raising the `Github` per-page limits only if you stay under the hourly quota.
+- **Encoding issues** – `RQ3_complexity_analysis/ai.py` and `human.py` automatically fall back to UTF-8 with replacement characters, but you can narrow `SUPPORTED_EXTS` if exotic extensions cause failures.
 
-The second notebook answers the research questions with descriptive stats and visualizations.
-
-1. **Data preparation.**
-   - Reuses the same PR ingestion logic, joins repository language data, converts timestamps, and derives helper columns (`has_body`, `time_to_merge_hours`, `body_length`, etc.).
-   - Imports the GPT-enriched CSV to add `high_level_pattern`, `sub_pattern`, and GPT confidence to each PR.
-2. **Feature engineering & scoring.**
-   - Functions such as `assess_description_quality` score PR descriptions on a 0–5 scale.
-   - Categorical bins for PR size, language, and success outcomes are created for group-by comparison.
-3. **Research questions covered by dedicated sections:**
-   - **RQ1 Adoption & Practices:** PR size vs. merge rate, description quality, programming language mix.
-   - **RQ2 Optimization Patch Characteristics:** Distribution of pattern families, additions/deletions, commit volume.
-   - **RQ3 Testing & Evaluation (WIP):** Stubbed; hooks exist for future metrics.
-   - **RQ4 Review Dynamics:** Merge/review latency distributions, state transitions.
-   - **RQ5 Failure Patterns:** Characteristics of closed-but-unmerged PRs and qualitative failure reasons.
-4. **Visualization.** Uses Matplotlib/Seaborn to render bar charts, KDEs, stacked distributions, and pattern comparison plots by author type.
-5. **Exports.** Final aggregated tables and the enriched PR dataset can be written back out for slide decks or further modeling.
-
-> ⚠️ GPT generation cells inside this notebook are marked “DO NOT rerun” to avoid duplicate spend. Use the outputs from the pattern-detection notebook unless you intentionally want to regenerate labels.
-
-## How to Reproduce the Analysis
-
-1. Run `optimization_pattern_detection.ipynb` end-to-end (or rerun only the batching section with `resume=True`) until `perf_prs_with_gpt_analysis.csv` is produced.
-2. Open `Performance_PR_Analysis_AI_vs_Human.ipynb`, run the setup + data prep cells, and then execute individual research-question sections as needed.
-3. Inspect or export the figures/statistics that align with your study goals.
-
-## Troubleshooting & Tips
-
-- **Dataset scale:** The Hugging Face parquet files are sizable; prefer running locally with adequate memory or mirror the data to object storage close to your compute.
-- **API rate limits:** Adjust `batch_size`, `delay`, or provide Azure/OpenAI-style rate limit configs if you hit throttling.
-- **Long patches:** The helper automatically trims patch payloads, but you can tighten the `patch_str` cap if you see token limit errors.
-- **Version control:** Because notebooks produce large intermediate artifacts, add the CSV/plots you care about and ignore checkpoints in Git as needed.
-
-## Environment variables
-
-The project uses a `.env` file to securely manage sensitive information such as the GitHub API token. Ensure you have a `.env` file in the root directory with the following content:
-
-```
-GITHUB_TOKEN=your_github_personal_access_token
-```
-
-Replace `your_github_personal_access_token` with your actual token. This token is loaded in the notebooks using the `python-dotenv` package to authenticate GitHub API requests.
-
-Feel free to adapt the notebooks into Python scripts if you plan to schedule recurring refreshes or integrate with other analytics tooling.
+With the structure above you can run any subset of the questions independently or stitch them together for a full refresh of the GitHub Performance Patch Study.
