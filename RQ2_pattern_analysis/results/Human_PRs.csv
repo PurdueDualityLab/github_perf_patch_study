@@ -1,0 +1,84 @@
+PR ID,PR URL,Final Pattern,Final Sub Pattern,Label Source
+2260441374,https://github.com/OpenHFT/Chronicle-Core/pull/684,Control-Flow and Branching Optimizations,Rearranging for early return,manual_review
+2260678480,https://github.com/OpenHFT/Chronicle-Wire/pull/984,I/O and Synchronization,Concurrency Control / Lock Optimization,llm_agreement
+2269202548,https://github.com/seasonedcc/remix-forms/pull/272,Code Smells and Structural Simplification,Remove Unnecessary Method Calls,manual_review
+2269709704,https://github.com/microsoft/typescript-go/pull/218,Memory and Data Locality Optimizations,Optimize Object Use,llm_agreement
+2277950711,https://github.com/OpenHFT/Chronicle-Wire/pull/985,Code Smells and Structural Simplification,Remove Unnecessary Method Calls,llm_agreement
+2297969098,https://github.com/yamadashy/repomix/pull/309,I/O and Synchronization,Enable Multi-threading,manual_review
+2303501996,https://github.com/oven-sh/bun/pull/16857,No Meaningful Change or Not Performance PR,,manual_review
+2308221415,https://github.com/calcom/cal.com/pull/19021,"Network, Database, and Data Access Optimization",Minimize Payload Size / Pass Reference Instead of Value,llm_agreement
+2309904375,https://github.com/dotnet/runtime/pull/112047,Code Smells and Structural Simplification,Remove Unnecessary Method Calls,llm_agreement
+2311607019,https://github.com/wolfSSL/wolfssl/pull/8412,Algorithm-Level Optimizations,Select Space Efficient Algorithm,llm_agreement
+2316356365,https://github.com/OpenHFT/Chronicle-Wire/pull/988,I/O and Synchronization,Concurrency Control / Lock Optimization,llm_agreement
+2324987642,https://github.com/tinygrad/tinygrad/pull/8994,Code Smells and Structural Simplification,Remove Unnecessary Method Calls,llm_agreement
+2336649960,https://github.com/bitcoin/bitcoin/pull/31868,Algorithm-Level Optimizations,Select Computationally Efficient Algorithms,llm_agreement
+2336988355,https://github.com/beyond-all-reason/Beyond-All-Reason/pull/4336,Memory and Data Locality Optimizations,Optimize Object Use,manual_review
+2337334370,https://github.com/crewAIInc/crewAI/pull/2136,Algorithm-Level Optimizations,Select Computationally Efficient Algorithms,llm_agreement
+2337335339,https://github.com/crewAIInc/crewAI/pull/2137,Algorithm-Level Optimizations,Select Computationally Efficient Algorithms,llm_agreement
+2353668916,https://github.com/calcom/cal.com/pull/19491,No Meaningful Change or Not Performance PR,,manual_review
+2354104157,https://github.com/AFASSoftware/maquette/pull/193,Code Smells and Structural Simplification,Remove Unnecessary Method Calls,manual_review
+2356811134,https://github.com/gofiber/fiber/pull/3329,Build & Compilation & Infrastructure Optimization,Performance-Optimized Dependency Selection,manual_review
+2356985296,https://github.com/bruin-data/bruin/pull/470,"Network, Database, and Data Access Optimization",Minimize Payload Size / Pass Reference Instead of Value,llm_agreement
+2358030784,https://github.com/onyx-dot-app/onyx/pull/4127,"Network, Database, and Data Access Optimization",Batch API Requests (N+1),llm_agreement
+2369238232,https://github.com/joshyattridge/smart-money-concepts/pull/74,Algorithm-Level Optimizations,Select Computationally Efficient Algorithms,llm_agreement
+2369253951,https://github.com/joshyattridge/smart-money-concepts/pull/75,Algorithm-Level Optimizations,Select Computationally Efficient Algorithms,manual_review
+2369320781,https://github.com/microsoft/typescript-go/pull/405,Memory and Data Locality Optimizations,Optimize Object Use,llm_agreement
+2386158448,https://github.com/dotnet/fsharp/pull/18377,Memory and Data Locality Optimizations,Caching,llm_agreement
+2389511160,https://github.com/calcom/cal.com/pull/20034,"Network, Database, and Data Access Optimization",Lazy Loading / Deferred Initialization,llm_agreement
+2392888093,https://github.com/calcom/cal.com/pull/20080,Build & Compilation & Infrastructure Optimization,Performance-Optimized Dependency Selection,manual_review
+2394225726,https://github.com/stack-auth/stack-auth/pull/546,I/O and Synchronization,Concurrency Control / Lock Optimization,manual_review
+2398828721,https://github.com/appsmithorg/appsmith/pull/39757,I/O and Synchronization,Enable Multi-threading,manual_review
+2398994327,https://github.com/medplum/medplum/pull/6182,Control-Flow and Branching Optimizations,Rearranging for early return,manual_review
+2400016065,https://github.com/crewAIInc/crewAI/pull/2397,Code Smells and Structural Simplification,Remove Unnecessary Method Calls,llm_agreement
+2408616836,https://github.com/roboflow/inference/pull/1092,Algorithm-Level Optimizations,Select Computationally Efficient Algorithms,llm_agreement
+2412640161,https://github.com/dotnet/efcore/pull/35835,Memory and Data Locality Optimizations,Optimize Object Use,llm_agreement
+2419106029,https://github.com/getsentry/sentry/pull/87963,Data Structure Selection and Adaptation,Darwinian Data Structure Selection,manual_review
+2425248848,https://github.com/oven-sh/bun/pull/18585,Memory and Data Locality Optimizations,Use Smaller Data Types,manual_review
+2427616889,https://github.com/RockChinQ/LangBot/pull/1256,No Meaningful Change or Not Performance PR,,manual_review
+2432868443,https://github.com/calcom/cal.com/pull/20496,Memory and Data Locality Optimizations,Optimize Object Use,manual_review
+2439339242,https://github.com/calcom/cal.com/pull/20545,Build & Compilation & Infrastructure Optimization,Enable Build-Time Optimizations,llm_agreement
+2441809617,https://github.com/antiwork/gumroad/pull/56,I/O and Synchronization,Selection I/O size,manual_review
+2443864788,https://github.com/herbie-fp/herbie/pull/1182,Code Smells and Structural Simplification,Remove Unnecessary Method Calls,manual_review
+2452623588,https://github.com/vllm-project/vllm/pull/16440,Algorithm-Level Optimizations,Select Space Efficient Algorithm,llm_agreement
+2452691617,https://github.com/dotnet/runtime/pull/114517,Control-Flow and Branching Optimizations,Rearranging for early return,manual_review
+2469218203,https://github.com/wandb/weave/pull/4192,"Network, Database, and Data Access Optimization",Lazy Loading / Deferred Initialization,llm_agreement
+2483117033,https://github.com/dotnet/fsharp/pull/18509,Algorithm-Level Optimizations,Select Computationally Efficient Algorithms,manual_review
+2486573779,https://github.com/getsentry/sentry/pull/90516,No Meaningful Change or Not Performance PR,,manual_review
+2492416622,https://github.com/GlareDB/glaredb/pull/3750,I/O and Synchronization,Concurrency Control / Lock Optimization,llm_agreement
+2495944314,https://github.com/GlareDB/glaredb/pull/3756,Algorithm-Level Optimizations,Select Computationally Efficient Algorithms,llm_agreement
+2496617006,https://github.com/GlareDB/glaredb/pull/3762,Build & Compilation & Infrastructure Optimization,Compiler Optimization Hints/Directives,manual_review
+2497503442,https://github.com/GlareDB/glaredb/pull/3774,Algorithm-Level Optimizations,Select Computationally Efficient Algorithms,llm_agreement
+2503287360,https://github.com/noneback/go-taskflow/pull/89,Code Smells and Structural Simplification,Remove Unnecessary Method Calls,llm_agreement
+2504407177,https://github.com/modular/modular/pull/4511,Memory and Data Locality Optimizations,Optimize Object Use,llm_agreement
+2512247973,https://github.com/GlareDB/glaredb/pull/3793,Algorithm-Level Optimizations,Select Computationally Efficient Algorithms,llm_agreement
+2519312120,https://github.com/netket/netket/pull/2040,Data Structure Selection and Adaptation,Darwinian Data Structure Selection,manual_review
+2519831355,https://github.com/roboflow/inference/pull/1280,Memory and Data Locality Optimizations,Optimize Object Use,llm_agreement
+2524180167,https://github.com/mangiucugna/json_repair/pull/112,Algorithm-Level Optimizations,Select Algorithm Based on Instruction Speed,manual_review
+2524300649,https://github.com/mangiucugna/json_repair/pull/114,Memory and Data Locality Optimizations,Optimize Object Use,llm_agreement
+2524313861,https://github.com/mangiucugna/json_repair/pull/115,Control-Flow and Branching Optimizations,Rearranging for early return,manual_review
+2527565003,https://github.com/Kanaries/graphic-walker/pull/443,No Meaningful Change or Not Performance PR,,manual_review
+2531991252,https://github.com/box/box-ui-elements/pull/4109,Memory and Data Locality Optimizations,Optimize Object Use,llm_agreement
+2537690761,https://github.com/herbie-fp/herbie/pull/1231,Memory and Data Locality Optimizations,Optimize Object Use,llm_agreement
+2542615571,https://github.com/joamag/boytacean/pull/10,Algorithm-Level Optimizations,Select Computationally Efficient Algorithms,manual_review
+2544691147,https://github.com/gofiber/fiber/pull/3479,Memory and Data Locality Optimizations,Caching,llm_agreement
+2545078467,https://github.com/EricLBuehler/mistral.rs/pull/1379,Memory and Data Locality Optimizations,Optimize Object Use,llm_agreement
+2555753483,https://github.com/dotnet/msbuild/pull/11934,Memory and Data Locality Optimizations,Optimize Object Use,llm_agreement
+2558083620,https://github.com/bionic-gpt/bionic-gpt/pull/776,No Meaningful Change or Not Performance PR,,manual_review
+2560305820,https://github.com/antiwork/gumroad/pull/289,Build & Compilation & Infrastructure Optimization,Performance-Optimized Dependency Selection,manual_review
+2564432253,https://github.com/tokens-studio/figma-plugin/pull/3402,I/O and Synchronization,Selection I/O size,manual_review
+2573225924,https://github.com/microsoft/TypeScript/pull/61822,Memory and Data Locality Optimizations,Optimize Object Use,llm_agreement
+2577421996,https://github.com/antiwork/gumroad/pull/307,Memory and Data Locality Optimizations,Caching,llm_agreement
+2590261382,https://github.com/microsoft/vscode/pull/251382,Algorithm-Level Optimizations,Select Algorithm Based on Instruction Speed,manual_review
+2596620305,https://github.com/microsoft/qsharp/pull/2530,Build & Compilation & Infrastructure Optimization,Performance-Optimized Dependency Selection,manual_review
+2597070258,https://github.com/calcom/cal.com/pull/21855,Memory and Data Locality Optimizations,Caching,llm_agreement
+2604024784,https://github.com/calcom/cal.com/pull/21923,Memory and Data Locality Optimizations,Optimize Object Use,manual_review
+2604162624,https://github.com/antiwork/gumroad/pull/361,I/O and Synchronization,Selection I/O size,manual_review
+2607579182,https://github.com/gofiber/fiber/pull/3532,Code Smells and Structural Simplification,Remove long method by extracting new method,manual_review
+2608906245,https://github.com/antiwork/gumroad/pull/397,Memory and Data Locality Optimizations,Caching,llm_agreement
+2609611207,https://github.com/TracecatHQ/tracecat/pull/1213,I/O and Synchronization,Concurrency Control / Rate Limiting,llm_agreement
+2613893429,https://github.com/oven-sh/bun/pull/20612,Memory and Data Locality Optimizations,Optimize Object Use,manual_review
+2615702170,https://github.com/bruin-data/ingestr/pull/264,I/O and Synchronization,Concurrency Control / Rate Limiting,manual_review
+2616290996,https://github.com/roboflow/inference/pull/1385,Code Smells and Structural Simplification,Remove Unnecessary Method Calls,manual_review
+2617294066,https://github.com/appsmithorg/appsmith/pull/41033,I/O and Synchronization,Enable Multi-threading,manual_review
+2622581875,https://github.com/dotnet/runtime/pull/117071,Memory and Data Locality Optimizations,Optimize Object Use,llm_agreement
+2623769975,https://github.com/antiwork/gumroad/pull/471,"Network, Database, and Data Access Optimization",Relational Query Consolidation (N+1),llm_agreement
