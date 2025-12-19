@@ -240,7 +240,7 @@ PR ID,PR URL,Final Pattern,Final Sub Pattern,Label Source
 3216964251,https://github.com/mochilang/mochi/pull/7004,Algorithm-Level Optimizations,Select Computationally Efficient Algorithms,llm_agreement
 3217652543,https://github.com/gmathi/NovelLibrary/pull/244,Build & Compilation & Infrastructure Optimization,Enable Build-Time Optimizations,manual_review
 3217675934,https://github.com/gmathi/NovelLibrary/pull/246,Build & Compilation & Infrastructure Optimization,Enable Build-Time Optimizations,manual_review
-3217742863,https://github.com/gmathi/NovelLibrary/pull/247,Multiple Changes,,manual_review
+3217742863,https://github.com/gmathi/NovelLibrary/pull/247,Memory and Data Locality Optimizations,Caching,manual_review
 3217758395,https://github.com/mochilang/mochi/pull/7113,No Meaningful Change or Not Performance PR,,manual_review
 3217761016,https://github.com/mochilang/mochi/pull/7115,No Meaningful Change or Not Performance PR,,manual_review
 3217766297,https://github.com/mochilang/mochi/pull/7119,Control-Flow and Branching Optimizations,Rearranging for early return,manual_review

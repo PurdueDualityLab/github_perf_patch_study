@@ -133,7 +133,7 @@ PR ID,PR URL,Ricardo_Pattern,Ricardo_Sub_Pattern,Huiyun_Pattern,Huiyun_Sub_Patte
 3087728875,https://github.com/ryokun6/ryos/pull/94,Memory and Data Locality Optimizations,Optimize Object Use,Code Smells and Structural Simplification,Remove duplicate code,Memory and Data Locality Optimizations,Optimize Object Use
 3215330137,https://github.com/nnstreamer/nntrainer/pull/3312,I/O and Synchronization,,I/O and Synchronization,,I/O and Synchronization,Enable Multi-threading
 3217675934,https://github.com/gmathi/NovelLibrary/pull/246,Build & Compilation & Infrastructure Optimization,Reduce rebuilding size,Multiple Changes,,Build & Compilation & Infrastructure Optimization,Enable Build-Time Optimizations
-3217742863,https://github.com/gmathi/NovelLibrary/pull/247,Multiple Changes,,Multiple Changes,,Multiple Changes,
+3217742863,https://github.com/gmathi/NovelLibrary/pull/247,Multiple Changes,,Multiple Changes,,Memory and Data Locality Optimizations,Caching
 3209964949,https://github.com/ethyca/fides/pull/6310,I/O and Synchronization,Non-Blocking I/O,I/O and Synchronization,Non-Blocking I/O,I/O and Synchronization,Non-Blocking I/O
 3242666013,https://github.com/ohcnetwork/care_fe/pull/12979,Code Smells and Structural Simplification,Remove duplicate code,Code Smells and Structural Simplification,Remove duplicate code,Code Smells and Structural Simplification,Remove duplicate code
 2973653748,https://github.com/magiclabs/magic-js/pull/874,Build & Compilation & Infrastructure Optimization,Performance-Optimized Dependency Selection,Build & Compilation & Infrastructure Optimization,Performance-Optimized Dependency Selection,Build & Compilation & Infrastructure Optimization,Performance-Optimized Dependency Selection
