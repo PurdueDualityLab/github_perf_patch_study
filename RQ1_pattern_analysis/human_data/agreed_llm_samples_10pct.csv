@@ -1,0 +1,21 @@
+id,html_url,pattern,subpattern
+2531991252,https://github.com/box/box-ui-elements/pull/4109,Memory and Data Locality Optimizations,Optimize Object Use
+2324987642,https://github.com/tinygrad/tinygrad/pull/8994,Code Smells and Structural Simplification,Remove Unnecessary Method Calls
+2356985296,https://github.com/bruin-data/bruin/pull/470,"Network, Database, and Data Access Optimization",Minimize Payload Size / Pass Reference Instead of Value
+2336649960,https://github.com/bitcoin/bitcoin/pull/31868,Algorithm-Level Optimizations,Select Computationally Efficient Algorithms
+3128867544,https://github.com/mochilang/mochi/pull/214,Memory and Data Locality Optimizations,Caching
+3073998720,https://github.com/MontrealAI/AGI-Alpha-Agent-v0/pull/367,I/O and Synchronization,Streaming Implementation Or Optimization
+3213723251,https://github.com/jscarle/LightResults/pull/60,Memory and Data Locality Optimizations,Optimize Object Use
+3241523087,https://github.com/doodlum/skyrim-community-shaders/pull/1281,Memory and Data Locality Optimizations,Caching
+3006544045,https://github.com/saturday06/VRM-Addon-for-Blender/pull/798,Memory and Data Locality Optimizations,Caching
+3154652967,https://github.com/dotnet/sdk/pull/49459,Build & Compilation & Infrastructure Optimization,Reduce rebuilding size
+3070165463,https://github.com/calcom/cal.com/pull/21371,Algorithm-Level Optimizations,Select Computationally Efficient Algorithms
+3107735616,https://github.com/MontrealAI/AGI-Alpha-Agent-v0/pull/1377,Algorithm-Level Optimizations,Select Computationally Efficient Algorithms
+3077200502,https://github.com/OWASP-BLT/BLT/pull/4290,Memory and Data Locality Optimizations,Cache Eviction Policy
+3146329050,https://github.com/microsoft/onnxruntime/pull/25066,Memory and Data Locality Optimizations,Optimize Object Use
+3093949496,https://github.com/microsoft/testfx/pull/5654,Memory and Data Locality Optimizations,Caching
+3213876116,https://github.com/jscarle/LightResults/pull/76,Build & Compilation & Infrastructure Optimization,Compiler Optimization Hints/Directives
+3220760486,https://github.com/jniebuhr/gaggimate/pull/299,Memory and Data Locality Optimizations,Optimize Object Use
+3061069405,https://github.com/airbytehq/airbyte/pull/60253,Build & Compilation & Infrastructure Optimization,Performance-Optimized Dependency Selection
+3039380315,https://github.com/calcom/cal.com/pull/21113,Build & Compilation & Infrastructure Optimization,Performance-Optimized Dependency Selection
+3235179464,https://github.com/microsoft/testfx/pull/6060,Algorithm-Level Optimizations,Select Computationally Efficient Algorithms
