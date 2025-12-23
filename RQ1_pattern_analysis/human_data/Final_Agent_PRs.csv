@@ -1,4 +1,4 @@
-PR ID,PR URL,Ricardo_Pattern,Ricardo_Sub_Pattern,Huiyun_Pattern,Huiyun_Sub_Pattern,Final_Pattern,Final_Sub_Pattern
+PR ID,PR URL,Annotater_2_Pattern,Annotater_2_Sub_Pattern,Annotater_1_Pattern,Annotater_1_Sub_Pattern,Final_Pattern,Final_Sub_Pattern
 3254647682,https://github.com/JuliaLang/julia/pull/59071,Code Smells and Structural Simplification,Type Checking,Code Smells and Structural Simplification,Remove code bloat by removing optional features,Algorithm-Level Optimizations,Select Algorithm Based on Instruction Speed
 3074606452,https://github.com/robertpenner/as3-signals/pull/74,Data Structure Selection and Adaptation,Darwinian Data Structure Selection,Data Structure Selection and Adaptation,Darwinian Data Structure Selection,Data Structure Selection and Adaptation,Darwinian Data Structure Selection
 3146327522,https://github.com/microsoft/onnxruntime/pull/25061,Algorithm-Level Optimizations,Select Computationally Efficient Algorithms,Algorithm-Level Optimizations,Select Computationally Efficient Algorithms,Algorithm-Level Optimizations,Select Computationally Efficient Algorithms
