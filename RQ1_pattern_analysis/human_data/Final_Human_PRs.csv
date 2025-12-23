@@ -1,4 +1,4 @@
-PR ID,PR URL,Ricardo_Pattern,Ricardo_Sub_Pattern,Huiyun_Pattern,Huiyun_Sub_Pattern,Final_Pattern,Final_Sub_Pattern
+PR ID,PR URL,Annotater_2_Pattern,Annotater_2_Sub_Pattern,Annotater_1_Pattern,Annotater_1_Sub_Pattern,Final_Pattern,Final_Sub_Pattern
 2486573779,https://github.com/getsentry/sentry/pull/90516,No Meaningful Change or Not Performance PR,,No Meaningful Change or Not Performance PR,,No Meaningful Change or Not Performance PR,
 2419106029,https://github.com/getsentry/sentry/pull/87963,Data Structure Selection and Adaptation,Darwinian Data Structure Selection,Data Structure Selection and Adaptation,Darwinian Data Structure Selection,Data Structure Selection and Adaptation,Darwinian Data Structure Selection
 2425248848,https://github.com/oven-sh/bun/pull/18585,Memory and Data Locality Optimizations,Use Smaller Data Types,Algorithm-Level Optimizations,Select Algorithm Based on Instruction Speed,Memory and Data Locality Optimizations,Use Smaller Data Types
